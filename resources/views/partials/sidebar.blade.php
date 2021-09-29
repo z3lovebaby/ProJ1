@@ -55,6 +55,36 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="{{route('advert.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+               Advertisement
+                
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{route('settings.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+              Setting
+                
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{route('settings.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+              News
+                
+              </p>
+            </a>
+          </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
