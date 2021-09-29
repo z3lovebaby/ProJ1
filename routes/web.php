@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdvertAdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SettingAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,4 +80,48 @@ Route::prefix('menus')->group(function (){
         'as'=>'menus.delete',
         'uses'=>'App\Http\Controllers\MenuController@delete',
     ]);
+});
+
+Route::prefix('advert')->group(function (){
+    Route::get('/', [
+        AdvertAdminController::class, 'index'
+    ])->name('advert.index');
+    Route::get('/create', [
+        AdvertAdminController::class, 'create'
+    ])->name('advert.create');
+    Route::post('/store', [
+        AdvertAdminController::class, 'store'
+    ])->name('advert.store');
+    Route::get('/edit/{id}', [
+        AdvertAdminController::class, 'edit'
+    ])->name('advert.edit');
+    Route::post('/update/{id}', [
+        AdvertAdminController::class, 'update'
+    ])->name('advert.update');
+    Route::get('/delete/{id}', [
+        AdvertAdminController::class, 'delete'
+    ])->name('advert.delete');
+    
+});
+
+Route::prefix('Settings')->group(function () {
+    Route::get('/', [
+        SettingAdminController::class, 'index'
+    ])->name('settings.index');
+    Route::get('/create', [
+        SettingAdminController::class, 'create'
+    ])->name('settings.create');
+    Route::post('/store', [
+        SettingAdminController::class, 'store'
+    ])->name('settings.store');
+    Route::get('/edit/{id}', [
+        SettingAdminController::class, 'edit'
+    ])->name('settings.edit');
+    Route::post('/update/{id}', [
+        SettingAdminController::class, 'update'
+    ])->name('settings.update');
+    Route::get('/delete/{id}', [
+        SettingAdminController::class, 'delete'
+    ])->name('settings.delete');
+    
 });
