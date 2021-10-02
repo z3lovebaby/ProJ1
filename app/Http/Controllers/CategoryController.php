@@ -18,12 +18,12 @@ class CategoryController extends Controller
 
         $htmlOption=$this->getCategory($parentId='');
                     
-        return view ('category.add',compact('htmlOption'));
+        return view ('admin.category.add',compact('htmlOption'));
     }
     
     public function index(){
         $categories=$this->danhmucsach->latest()->paginate(5);
-        return view ('category.index',compact('categories'));
+        return view ('admin.category.index',compact('categories'));
     }
     public function store(Request $request){
         $this->danhmucsach->create([
@@ -45,7 +45,7 @@ class CategoryController extends Controller
     public function edit($id){
           $category=$this->danhmucsach->find($id);
         $htmlOption=$this->getCategory($category->DMS_parentId);
-        return view ('category.edit',compact('category','htmlOption'));
+        return view ('admin.category.edit',compact('category','htmlOption'));
     }
 
     public function update($id,Request $request){
