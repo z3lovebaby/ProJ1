@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RequestAdvert;
 use Illuminate\Http\Request;
 use App\Models\Advert;
 use App\Traits\StorageImageTrait;
@@ -19,16 +20,16 @@ class AdvertAdminController extends Controller
     }
     public function index(){
         $adverts=$this->advert->paginate(5);
-        return view('advert.index',compact('adverts'));
+        return view('admin.advert.index',compact('adverts'));
         
         // $adverts = $this->advert->paginate(5);
         // dd($adverts);
         // // return view('advert.index',compact('adverts'));
     }
     public function create(){
-        return view('advert.add');
+        return view('admin.advert.add');
     }
-    public function store(Request $request){
+    public function store(RequestAdvert $request){
         try{
             $data= [
                 'name' => $request->name,
@@ -55,9 +56,9 @@ class AdvertAdminController extends Controller
         $adverts=$this->advert->find($id);
       
 
-        return view('advert.edit', compact('adverts'));
+        return view('admin.advert.edit', compact('adverts'));
     }
-    public function update(Request $request,$id){
+    public function update(RequestAdvert $request,$id){
         try{
             $data=[
                         'name'=>$request->name,
