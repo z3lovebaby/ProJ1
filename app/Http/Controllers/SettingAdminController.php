@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Exception;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Log;
+use App\Http\Requests\SettingRequest;
 
 class SettingAdminController extends Controller
 {
@@ -17,12 +18,12 @@ class SettingAdminController extends Controller
     }
     public function index(){
         $settings=$this->setting->latest()->paginate(5);
-        return view('settings.index',compact('settings'));
+        return view('admin.settings.index',compact('settings'));
     }
     public function create(){
-        return view('settings.add');
+        return view('admin.settings.add');
     }
-    public function store(Request $request){
+    public function store(SettingRequest $request){
         $this->setting->create([
             'config_key'=>$request->config_key,
             'config_value'=>$request->config_value,
@@ -32,9 +33,9 @@ class SettingAdminController extends Controller
     }
     public function edit($id){
         $settings=$this->setting->find($id);
-        return view('settings.edit',compact('settings'));
+        return view('admin.settings.edit',compact('settings'));
     }
-    public function update(Request $request,$id){
+    public function update(SettingRequest $request,$id){
         $this->setting->find($id)->update([
             'config_key'=>$request->config_key,
             'config_value'=>$request->config_value,
