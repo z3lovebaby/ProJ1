@@ -510,6 +510,7 @@ class ComposerStaticInit8e7b31c49700611a935dddb5c3f904bf
         'App\\Components\\Recusive' => __DIR__ . '/../..' . '/app/Components/Recusive.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\AdvertAdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdvertAdminController.php',
         'App\\Http\\Controllers\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoryController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
