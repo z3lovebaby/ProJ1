@@ -47,12 +47,17 @@ class MenuController extends Controller
   }
 
   public function update($id,Request $request){
-      $this->danhmucsach->find($id)->update([
-          'DMS_Tieude'=>$request->DMS_Tieude,
-          'DMS_parentId'=>$request->DMS_parentId,
-          'DMS_Mota'=>$request->DMS_Mota,
-          'DMS_Vitri'=>$request->DMS_Vitri
+      $this->menu->find($id)->update([
+          'name'=>$request->name,
+          'parent_id'=>$request->parent_id,
+          'slug'=> str::slug($request->name)
       ]);
-        return redirect()->route('categories.index');
+      return redirect()->route('menus.index');
   }
+
+  public function delete($id){
+    $this->menu->find($id)->delete();
+        return redirect()->route('menus.index');
+}
+
 }

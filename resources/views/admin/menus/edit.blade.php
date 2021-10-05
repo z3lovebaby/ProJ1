@@ -14,7 +14,7 @@
      <div class="container-fluid">
        <div class="row">
          <div class="col-md-6">
-             <form action="{{route('menus.store')}}" method="POST" class="ml-5">
+             <form action="{{route('menus.update',['id' => $menuEdit->id])}}" method="POST" class="ml-5">
                @csrf
             <div class="form-group">
               <label for="exampleInputEmail1">Tên menu</label>
@@ -30,7 +30,7 @@
                     {!!$optionSelect!!}
                 </select>
               </div>
-            <button type="submit" class="btn btn-primary">SUBMIT</button>
+            <button type="submit" class="btn btn-primary">UPDATE</button>
           </form>
          </div>
         
