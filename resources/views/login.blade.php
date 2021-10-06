@@ -1,9 +1,15 @@
 <!-- Dark mode not enabled -->
 <html>
     <head>
-      <title>Facebook Login/Signup</title>
-      <link rel='icon' href='https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png' />
+      <title>CodeKit Login</title>
+      <link rel='icon' href="https://scontent.fhan5-4.fna.fbcdn.net/v/t1.6435-9/152406961_1802432383270100_3355430014002109187_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8631f5&_nc_ohc=WYGiRhCcNtsAX-zJRuj&tn=GNg9XADo8URz-FIm&_nc_ht=scontent.fhan5-4.fna&oh=99c02c5b488d20d5de95436aad6422ce&oe=61834C9B"  />
+      <!-- https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png -->
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <style>
+          .abcd{
+            background-color: 	#FF0000;
+          }
+        </style>
         <body>
             <!--
   This example requires Tailwind CSS v2.0+ 
@@ -52,6 +58,16 @@
         <input type="hidden" name="remember" value="true">
         <div class="rounded-md shadow-sm -space-y-px">
           <div>
+            <?php
+
+// alert alert-danger text-center text-danger
+
+            $message=session()->get('message');
+              if( $message){
+                  echo'<div class="rounded-full abcd text-center p-3 mb-2 bg-danger text-white">'.$message.'</div>';
+                  $message=session()->put('message',null);
+                }
+            ?>
             <label for="email-address" class="sr-only">Email address</label>
             <input  name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" placeholder="Email address" required>
           </div>

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+session_start();
 
 class AdminController extends Controller
 {
@@ -24,7 +26,19 @@ class AdminController extends Controller
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             // Authentication was successful..
+            
+            session()->put('email',$request->email);
+            session()->put('id',$request->id);
             return redirect()->to('home');
         }
+        else{
+            session()->put('message','Email hoặc mật khẩu không đúng !');
+            return redirect()->to('admin');
+        }
+    }
+    public function logoutAdmin(){
+        session()->put('email',null);
+        session()->put('id',null);
+        return redirect()->to('admin');
     }
 }

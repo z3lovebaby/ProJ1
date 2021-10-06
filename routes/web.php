@@ -23,6 +23,9 @@ Route::get('/admin', [
 Route::post('/admin', [
     AdminController::class, 'postLoginAdmin'
 ]);
+Route::get('/logout', [
+    AdminController::class, 'logoutAdmin'
+])->name('logoutAdmin');
 
 Route::get('/home', function () {
     return view('home');
