@@ -54,7 +54,17 @@
               </p>
             </a>
           </li>
-
+          
+          <li class="nav-item">
+            <a href="{{route('sachs.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+               Sách
+                <span class="right badge badge-danger">SP</span>
+              </p>
+            </a>
+          </li>
+          
           <li class="nav-item">
             <a href="{{route('advert.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
