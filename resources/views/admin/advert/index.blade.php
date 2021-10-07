@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('title')
 <title>
-  Danh mục sản phẩm
+  Advertisement
 </title>
 @endsection
 @section('css')
@@ -31,7 +31,7 @@
              <thead>
                <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Slider</th>
+                                <th scope="col">Advertisement</th>
                                 <th scope="col">Description</th>
                                 <th scope="col">Hình ảnh</th>
 

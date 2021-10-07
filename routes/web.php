@@ -23,6 +23,9 @@ Route::get('/admin', [
 Route::post('/admin', [
     AdminController::class, 'postLoginAdmin'
 ]);
+Route::get('/logout', [
+    AdminController::class, 'logoutAdmin'
+])->name('logoutAdmin');
 
 Route::get('/home', function () {
     return view('home');
@@ -87,6 +90,18 @@ Route::prefix('admin')->group(function () {
         ]);
     });
     
+    Route::prefix('sachs')->group(function (){
+        Route::get('/',[
+            'as'=>'sachs.index',
+            'uses'=>'App\Http\Controllers\SachController@index',
+        ]);
+        Route::get('/create',[
+            'as'=>'sachs.create',
+            'uses'=>'App\Http\Controllers\SachController@create',
+        ]);
+    });
+
+
     Route::prefix('advert')->group(function (){
         Route::get('/', [
             AdvertAdminController::class, 'index'
