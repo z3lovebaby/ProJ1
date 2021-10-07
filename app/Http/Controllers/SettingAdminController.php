@@ -8,19 +8,22 @@ use Exception;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Log;
 use App\Http\Requests\SettingRequest;
-
+use App\Traits\AuthAdminTrait;
 class SettingAdminController extends Controller
 {
     private $setting;
+    use AuthAdminTrait;
     public function __construct(Setting $setting)
     {
         $this->setting=$setting;
     }
     public function index(){
+        $this->AuthLogin();
         $settings=$this->setting->latest()->paginate(5);
         return view('admin.settings.index',compact('settings'));
     }
     public function create(){
+        $this->AuthLogin();
         return view('admin.settings.add');
     }
     public function store(SettingRequest $request){
