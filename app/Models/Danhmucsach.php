@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Danhmucsach extends Model
 {
-    use HasFactory;
+    use HasFactory,SoftDeletes;
     /**
      * The attributes that are mass assignable.
      *
@@ -21,7 +22,7 @@ class Danhmucsach extends Model
         'DMS_TrangThai'
     ];
     public function Sachs(){
-        return $this->hasMany(Sach::class,'S_DanhmucId');
+        return $this->hasMany(Sach::class,'S_DanhMucId');
     }
 
 }
