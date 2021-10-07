@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Khachhang extends Model
 {
     use HasFactory;
-     /**
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -21,7 +21,7 @@ class Khachhang extends Model
         'KH_NgayBatDau',
         'KH_TrangThai',
         'KH_DienThoai',
-        'KH_DiaChi',
+        'KH_DiaChi'
     ];
     public function Thehangs(){
         return $this->hasMany(Thehang::class,'TH_KhachHangId');
