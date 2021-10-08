@@ -16,7 +16,7 @@ class CreateNxbsTable extends Migration
         Schema::create('nxbs', function (Blueprint $table) {
             $table->id();
             $table->string('NXB_Ten');
-            $table->text('NXB_MoTa');
+            $table->text('NXB_Mota');
             $table->timestamps();
         });
     }
