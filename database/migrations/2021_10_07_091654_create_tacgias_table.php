@@ -16,7 +16,7 @@ class CreateTacgiasTable extends Migration
         Schema::create('tacgias', function (Blueprint $table) {
             $table->id();
             $table->string('TG_HoTen');
-            $table->string('TG_MoTa');
+            $table->string('TG_Mota');
             $table->timestamps();
         });
     }
