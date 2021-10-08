@@ -10,7 +10,7 @@ class Nxb extends Model
     use HasFactory;
     protected $fillable = [
         'NXB_Ten',
-        'NXB_MoTa'
+        'NXB_Mota'
     ];
     public function Sachs(){
         return $this->hasMany(Sach::class,'S_NXBId');
