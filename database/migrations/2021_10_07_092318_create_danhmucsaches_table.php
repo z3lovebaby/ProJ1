@@ -15,11 +15,11 @@ class CreateDanhmucsachesTable extends Migration
     {
         Schema::create('danhmucsaches', function (Blueprint $table) {
             $table->id();
-            $table->string('DMS_TieuDe');
-            $table->integer('DMS_ParentId')->default(0);
-            $table->string('DMS_MoTa');
-            $table->integer('DMS_ViTri');
-            $table->binary('DMS_TrangThai');
+            $table->string('DMS_Tieude');
+            $table->integer('DMS_parentId')->default(0);
+            $table->string('DMS_Mota');
+            $table->integer('DMS_Vitri');
+//             $table->binary('DMS_TrangThai');
             $table->timestamps();
         });
     }
