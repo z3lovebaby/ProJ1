@@ -15,14 +15,14 @@ class CreateSachesTable extends Migration
     {
         Schema::create('saches', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('S_DanhMucId');
-            $table->foreign('S_DanhMucId')->references('id')->on('danhmucsaches')->onDelete('cascade');
+            $table->unsignedBigInteger('S_DanhmucId');
+            $table->foreign('S_DanhmucId')->references('id')->on('danhmucsaches')->onDelete('cascade');
             $table->string('S_Ten');
             $table->string('S_Ma');
             $table->text('S_Anh');
             $table->text('S_FileUpload');
-            $table->text('S_MoTa');
-            $table->text('S_ChiTiet');
+            $table->text('S_Mota');
+            $table->text('S_Chitiet');
             $table->text('S_TuKhoa');
             $table->integer('S_GiaBan');
             $table->binary('S_TrangThai');
