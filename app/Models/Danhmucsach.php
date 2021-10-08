@@ -15,14 +15,14 @@ class Danhmucsach extends Model
      * @var array
      */
     protected $fillable = [
-        'DMS_TieuDe',
-        'DMS_ParentId',
-        'DMS_MoTa',
-        'DMS_ViTri',
-        'DMS_TrangThai'
+        'DMS_Tieude',
+        'DMS_parentId',
+        'DMS_Mota',
+        //         'DMS_TrangThai',
+        'DMS_Vitri'
     ];
     public function Sachs(){
-        return $this->hasMany(Sach::class,'S_DanhMucId');
+        return $this->hasMany(Sach::class,'S_DanhmucId');
     }
 
 }
