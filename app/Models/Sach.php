@@ -38,7 +38,7 @@ class Sach extends Model
         return $this->belongsTo(Tacgia::class,'S_TacGiaId','id');
     }
     public function Danhmucsachs(){
-        return $this->belongsTo(Danhmucsach::class,'S_DanhMucId','id');
+        return $this->belongsTo(Danhmucsach::class,'S_DanhmucId','id');
     }
     public function Chitietthehangs(){
         return $this->hasMany(Chitietthehang::class,'CTTH_SachId');
