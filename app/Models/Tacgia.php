@@ -10,7 +10,7 @@ class Tacgia extends Model
     use HasFactory;
     protected $fillable = [
         'TG_HoTen',
-        'TG_MoTa'
+        'TG_Mota'
     ];
     public function Sachs(){
         return $this->hasMany(Sach::class,'S_TacGiaId');
