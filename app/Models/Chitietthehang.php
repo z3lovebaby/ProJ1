@@ -8,14 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Chitietthehang extends Model
 {
     use HasFactory;
-     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+
+    use HasFactory;
     protected $fillable = [
+        'CTTH_TheHangId',
+        'CTTH_SachId',
         'CTTH_SoLuong',
-        'CTTH_ThanhTien',
+        'CTTH_ThanhTien'
     ];
     public function Sachs(){
         return $this->belongsTo(Sach::class,'CTTH_SachId','id');

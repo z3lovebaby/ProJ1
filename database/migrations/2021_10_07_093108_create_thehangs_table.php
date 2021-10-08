@@ -16,11 +16,11 @@ class CreateThehangsTable extends Migration
         Schema::create('thehangs', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('TH_KhachHangId');
+            $table->foreign('TH_KhachHangId')->references('id')->on('khachhangs')->onDelete('cascade');
             $table->dateTime('TH_Ngay');
             $table->integer("TH_ThanhTien");
             $table->binary('TH_TrangThai');
             $table->timestamps();
-            $table->foreign('TH_KhachHangId')->references('id')->on('khachhangs')->onDelete('cascade');
         });
     }
 

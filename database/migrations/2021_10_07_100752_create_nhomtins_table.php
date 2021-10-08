@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDanhmucsachesTable extends Migration
+class CreateNhomtinsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateDanhmucsachesTable extends Migration
      */
     public function up()
     {
-        Schema::create('danhmucsaches', function (Blueprint $table) {
+        Schema::create('nhomtins', function (Blueprint $table) {
             $table->id();
-            $table->string('DMS_Tieude');
-            $table->integer('DMS_parentId')->default(0);
-            $table->string('DMS_Mota');
-            $table->integer('DMS_Vitri');
+            $table->string('NT_Ten');
+            $table->text('NT_MoTa');
+            $table->integer('NT_ViTri');
+            $table->binary('NT_TrangThai');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateDanhmucsachesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('danhmucsaches');
+        Schema::dropIfExists('nhomtins');
     }
 }
