@@ -9,7 +9,7 @@ class Category extends Model
 {
     use HasFactory;
     protected $table = 'danhmucsaches';
-    public function_categoryChildrent(){
-        return $this->hasMany(related Category::class, foreignKey: DMS_parentId);
+    public function categoryChildren(){
+        return $this->hasMany(related: Category::class, foreignKey: DMS_parentId);
     }
 }
