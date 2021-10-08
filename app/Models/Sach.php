@@ -10,13 +10,13 @@ class Sach extends Model
     use HasFactory;
 
     protected $fillable = [
-        'S_DanhMucId',
+        'S_DanhmucId',
         'S_Ten',
         'S_Ma',
         'S_Anh',
         'S_FileUpload',
-        'S_MoTa',
-        'S_ChiTiet',
+        'S_Mota',
+        'S_Chitiet',
         'S_TuKhoa',
         'S_GiaBan',
         'S_TrangThai',
