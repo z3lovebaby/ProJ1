@@ -15,6 +15,7 @@
   This example requires Tailwind CSS v2.0+ 
   
   This example requires some changes to your config:
+
   
   ```
   // tailwind.config.js
@@ -28,7 +29,7 @@
   ```
 -->
 
-<!-- <div class="fb-login-button" >Login with Facebook</div> -->
+<!-- <div class="fb-login-button" >Login with Facebookfgdfgasfd</div> -->
 <div class="min-h-screen flex items-center justify-center bg-blue-100 py-12 px-4 sm:px-6 lg:px-8">
  
    
@@ -79,7 +80,7 @@
   
         <div class="flex items-center justify-between">
           <div class="flex items-center">
-            <input id="remember_me" name="remember_me" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-blue-500 border-gray-300 rounded">
+            <input id="remember_me" value="remember_me" name="remember_me" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-blue-500 border-gray-300 rounded">
             <label for="remember_me" class="ml-2 block text-sm text-gray-900">
               Remember me
             </label>

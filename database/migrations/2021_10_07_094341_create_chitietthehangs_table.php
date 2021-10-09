@@ -16,12 +16,12 @@ class CreateChitietthehangsTable extends Migration
         Schema::create('chitietthehangs', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('CTTH_TheHangId');
+            $table->foreign('CTTH_TheHangId')->references('id')->on('thehangs')->onDelete('cascade');
             $table->unsignedBigInteger('CTTH_SachId');
+            $table->foreign('CTTH_SachId')->references('id')->on('saches')->onDelete('cascade');
             $table->integer('CTTH_SoLuong');
             $table->integer('CTTH_ThanhTien');
             $table->timestamps();
-            $table->foreign('CTTH_SachId')->references('id')->on('saches')->onDelete('cascade');
-            $table->foreign('CTTH_TheHangId')->references('id')->on('thehangs')->onDelete('cascade');
         });
     }
 

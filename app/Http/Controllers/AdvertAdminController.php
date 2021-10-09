@@ -7,18 +7,21 @@ use App\Http\Requests\RequestAdvert;
 use Illuminate\Http\Request;
 use App\Models\Advert;
 use App\Traits\StorageImageTrait;
+use App\Traits\AuthAdminTrait;
 use Exception;
 USE Illuminate\Support\Facades\Log;
 
 class AdvertAdminController extends Controller
 {
     use StorageImageTrait;
+    use AuthAdminTrait;
     private $advert;
     public function __construct(Advert $advert)
     {
         $this->advert=$advert;
     }
     public function index(){
+        $this->AuthLogin();
         $adverts=$this->advert->paginate(5);
         return view('admin.advert.index',compact('adverts'));
         
@@ -27,6 +30,7 @@ class AdvertAdminController extends Controller
         // // return view('advert.index',compact('adverts'));
     }
     public function create(){
+        $this->AuthLogin();
         return view('admin.advert.add');
     }
     public function store(RequestAdvert $request){

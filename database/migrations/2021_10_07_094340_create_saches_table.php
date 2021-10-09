@@ -16,6 +16,7 @@ class CreateSachesTable extends Migration
         Schema::create('saches', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('S_DanhmucId');
+            $table->foreign('S_DanhmucId')->references('id')->on('danhmucsaches')->onDelete('cascade');
             $table->string('S_Ten');
             $table->string('S_Ma')->nullable();
             $table->string('S_Anh');
@@ -37,6 +38,8 @@ class CreateSachesTable extends Migration
             $table->foreign('S_NXBId')->references('id')->on('nxbs')->onDelete('cascade');
             $table->foreign('S_DanhmucId')->references('id')->on('danhmucsaches')->onDelete('cascade');
             $table->foreign('S_TacGiaId')->references('id')->on('tacgias')->onDelete('cascade');
+            $table->integer('S_CanNang');
+            $table->timestamps();
         });
     }
 
