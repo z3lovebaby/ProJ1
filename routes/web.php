@@ -145,5 +145,32 @@ Route::prefix('admin')->group(function () {
         ])->name('settings.delete');
         
     });
+    Route::prefix('News')->group(function (){
+        Route::get('/',[
+            'as'=>'news.index',
+            'uses'=>'App\Http\Controllers\NewsController@index',
+        ]);
+        Route::get('/create',[
+            'as'=>'news.create',
+            'uses'=>'App\Http\Controllers\NewsController@create',
+        ]);
+        Route::post('/store',[
+            'as'=>'news.store',
+            'uses'=>'App\Http\Controllers\NewsController@store',
+        ]);
+        //  Route::get('/edit/{id}',[
+        //     'as'=>'categories.edit',
+        //     'uses'=>'App\Http\Controllers\CategoryController@edit',
+        // ]);
+        //   Route::post('/update/{id}',[
+        //     'as'=>'categories.update',
+        //     'uses'=>'App\Http\Controllers\CategoryController@update',
+        // ]);
+    
+        //   Route::get('/delete/{id}',[
+        //     'as'=>'categories.delete',
+        //     'uses'=>'App\Http\Controllers\CategoryController@delete',
+        // ]);
+    });
     
 });
