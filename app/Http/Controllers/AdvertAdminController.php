@@ -79,24 +79,24 @@ class AdvertAdminController extends Controller
                                         }
 
     }
-   public function delete($id){
-    try{
-        $this->advert->find($id)->delete();
-        return response()->json([
-            'code'=>200,
-            'message'=>'success',
+//    public function delete($id){
+//     try{
+//         $this->advert->find($id)->delete();
+//         return response()->json([
+//             'code'=>200,
+//             'message'=>'success',
 
-        ],status:200);
+//         ],status:200);
 
-    }
-    catch (Exception $exception) {
+//     }
+//     catch (Exception $exception) {
        
-        Log::error('Message:' . $exception->getMessage() . 'Line' . $exception->getLine());
-        return response()->json([
-            'code'=>500,
-            'message'=>'fail',
+//         Log::error('Message:' . $exception->getMessage() . 'Line' . $exception->getLine());
+//         return response()->json([
+//             'code'=>500,
+//             'message'=>'fail',
 
-        ],status:500);
-    }
-   }
+//         ],status:500);
+//     }
+//    }
 }

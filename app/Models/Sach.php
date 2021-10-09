@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Sach extends Model
-{
+{   protected $cast=['S_TuKhoa'=>'array'];
     use HasFactory;
+    protected $guarded = [];
     public function Nxbs(){
         return $this->belongsTo(Nxb::class,'S_NXBId','id');
     }
