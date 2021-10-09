@@ -20,6 +20,7 @@ class CreateSachesTable extends Migration
             $table->string('S_Ten');
             $table->string('S_Ma')->nullable();
             $table->string('S_Anh');
+            $table->text('S_FileUpload')->nullable();
             $table->text('S_Mota')->nullable();
             $table->text('S_Chitiet')->nullable();
             $table->string('S_TuKhoa')->nullable();
@@ -28,16 +29,14 @@ class CreateSachesTable extends Migration
             $table->integer('S_SoLanXem')->nullable();
             $table->char('S_KichCo')->nullable();
             $table->unsignedBigInteger('S_NXBId')->nullable();
+            $table->foreign('S_NXBId')->references('id')->on('nxbs')->onDelete('cascade');
             $table->integer('S_GiaNhap')->nullable();
             $table->integer('S_SoLuong')->nullable();
             $table->string('S_ViTri');
             $table->integer('S_NguyenBo')->nullable();
             $table->unsignedBigInteger('S_TacGiaId')->nullable();
-            $table->integer('S_CamNang')->nullable();
-            $table->foreign('S_NXBId')->references('id')->on('nxbs')->onDelete('cascade');
-            $table->foreign('S_DanhmucId')->references('id')->on('danhmucsaches')->onDelete('cascade');
             $table->foreign('S_TacGiaId')->references('id')->on('tacgias')->onDelete('cascade');
-            $table->integer('S_CanNang');
+            $table->integer('S_CanNang')->nullable();
             $table->timestamps();
         });
     }
