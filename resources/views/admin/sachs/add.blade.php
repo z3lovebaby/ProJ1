@@ -7,6 +7,7 @@
 @section('css')
 
     <link href="{{asset('vendors/select2/select2.min.css')}}" rel="stylesheet" />
+    <script src="{{asset('admins/sach/add/add.css')}}"></script>
 
 @endsection
 @section('content')
@@ -19,7 +20,7 @@
      <div class="container-fluid">
        <div class="row">
          <div class="col-md-6">
-             <form action="" method="POST" enctype="multipart/form-data" class="ml-5">
+             <form action="{{route('sachs.store')}}" method="POST" enctype="multipart/form-data" class="ml-5">
                @csrf
             <div class="form-group">
               <label for="exampleInputEmail1">Tên sách</label>
@@ -41,26 +42,35 @@
 
               <div class="form-group">
                 <label >Chọn danh mục</label>
-                <select class="form-control" name="DMS_parentId">
-                  <option value="0">Chọn đi chờ chi</option>
+                <select class="form-control select2_init" name="S_DanhmucId">
+                  <option value="">Chọn đi chờ chi</option>
                     {!!$htmlOption!!}
                 </select>
               </div>
               <div class="form-group">
                 <label for="exampleFormControlSelect1">The Tag</label>
-                <select class="form-control tags_select2" multiple="multiple">
+                <select class="form-control tags_select2" multiple="multiple" name="S_TuKhoa">
                 
               </select>
               </div>
-              
+              <div class="form-group">
+                <label for="exampleInputEmail1">NXB</label>
+                <input type="text" class="form-control" name="S_NXBId"
+                placeholder="Nhap ten sách">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Tac Gia</label>
+                  <input type="text" class="form-control" name="S_TacGiaId"
+                  placeholder="Nhap ten sách">
+                  </div>
             <div class="form-group">
               <label for="exampleInputMota">Số lượng</label>
               <input type="number" class="form-control" placeholder="Nhap vao số lượng" name="S_SoLuong">
             </div>
 
             <div class="form-group">
-              <label for="exampleInputVitri">Chi tiết</label>
-              <input type="text" class="form-control" placeholder="Nhap vao mô tả" name="S_Chitiet">
+              <label>Chi tiết</label>
+              <textarea name="S_Chitiet" class="form-control my-editor"  rows="3"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">SUBMIT</button>
           </form>
@@ -71,6 +81,7 @@
        <!-- /.row -->
      </div><!-- /.container-fluid -->
    </div>
+   
    <!-- /.content -->
  </div>
  <!-- /.content-wrapper -->
@@ -79,15 +90,8 @@
 
     
     <script src="{{asset('vendors/select2/select2.min.js')}}"></script>
-    <script src="{{asset('admins/sach/add/add.css')}}"></script>
-    <script>
-        $(function () {
-            $(".tags_select2").select2({
-    tags: true,
-    tokenSeparators: [',', ' ']
-})
-        })
-    </script>
+    <script src="/path-to-your-tinymce/tinymce.min.js"></script>
+    <script src="{{asset('admins/sach/add/add.js')}}"></script>
 
 @endsection
 

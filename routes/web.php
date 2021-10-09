@@ -99,6 +99,10 @@ Route::prefix('admin')->group(function () {
             'as'=>'sachs.create',
             'uses'=>'App\Http\Controllers\SachController@create',
         ]);
+        Route::post('/store',[
+            'as'=>'sachs.store',
+            'uses'=>'App\Http\Controllers\SachController@store',
+        ]);
     });
 
 

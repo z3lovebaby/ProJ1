@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Sach extends Model
-{
+{   protected $cast=['S_TuKhoa'=>'array'];
     use HasFactory;
+<<<<<<< HEAD
+    protected $guarded = [];
+=======
 
     protected $fillable = [
         'S_DanhmucId',
@@ -31,6 +34,7 @@ class Sach extends Model
         'S_CanNang'
     ];
 
+>>>>>>> 09bdfda47321f7968aed78d4c57c33b509f522b3
     public function Nxbs(){
         return $this->belongsTo(Nxb::class,'S_NXBId','id');
     }
