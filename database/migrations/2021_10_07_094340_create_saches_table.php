@@ -22,7 +22,6 @@ class CreateSachesTable extends Migration
             $table->string('S_Anh');
             $table->text('S_Mota')->nullable();
             $table->text('S_Chitiet')->nullable();
-            $table->timestamps();
             $table->string('S_TuKhoa')->nullable();
             $table->integer('S_GiaBan');
             $table->binary('S_TrangThai')->nullable();
