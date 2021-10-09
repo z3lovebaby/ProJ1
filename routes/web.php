@@ -150,6 +150,8 @@ Route::prefix('admin')->group(function () {
             'as'=>'news.index',
             'uses'=>'App\Http\Controllers\NewsController@index',
         ]);
+
+        //nhom tin
         Route::get('/create',[
             'as'=>'news.create',
             'uses'=>'App\Http\Controllers\NewsController@create',
@@ -158,19 +160,29 @@ Route::prefix('admin')->group(function () {
             'as'=>'news.store',
             'uses'=>'App\Http\Controllers\NewsController@store',
         ]);
-        //  Route::get('/edit/{id}',[
-        //     'as'=>'categories.edit',
-        //     'uses'=>'App\Http\Controllers\CategoryController@edit',
-        // ]);
-        //   Route::post('/update/{id}',[
-        //     'as'=>'categories.update',
-        //     'uses'=>'App\Http\Controllers\CategoryController@update',
-        // ]);
-    
-        //   Route::get('/delete/{id}',[
-        //     'as'=>'categories.delete',
-        //     'uses'=>'App\Http\Controllers\CategoryController@delete',
-        // ]);
+        Route::get('/edit/{id}',[
+            'as'=>'news.edit',
+            'uses'=>'App\Http\Controllers\NewsController@edit',
+        ]);
+          Route::get('/delete/{id}',[
+            'as'=>'news.delete',
+            'uses'=>'App\Http\Controllers\NewsController@delete',
+        ]);
+          Route::post('/update/{id}',[
+            'as'=>'news.update',
+            'uses'=>'App\Http\Controllers\NewsController@update',
+        ]);
+
+        //tin tuc
+        Route::get('/createnews',[
+            'as'=>'news.createnews',
+            'uses'=>'App\Http\Controllers\NewsnewsController@create',
+        ]);
+        Route::post('/storenews',[
+            'as'=>'news.storenews',
+            'uses'=>'App\Http\Controllers\NewsnewsController@store',
+        ]);
+
     });
     
 });

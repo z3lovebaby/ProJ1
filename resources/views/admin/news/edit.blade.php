@@ -8,7 +8,7 @@
  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    @include('partials.content-header',['name'=>'Newsgroup','key'=>'List'])
+    @include('partials.content-header',['name'=>'Newsgroup','key'=>'Edit'])
     <!-- /.content-header -->
 
 
@@ -18,11 +18,12 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6">
-            <form action="{{ route('news.store') }}" method="post">
+            <form action="{{ route('news.update', ['id' => $nhomtin->id]) }}" method="post">
                 @csrf
               <div class="form-group">
                 <label>Tên nhóm tin</label>
                 <input type="text" class="form-control" name="NT_Ten"
+                        value="{{ $nhomtin->NT_Ten }}"
                         placeholder="Nhập nhóm tin">
                 
                 <label>Mô tả</label>
