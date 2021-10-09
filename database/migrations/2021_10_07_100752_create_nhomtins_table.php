@@ -18,7 +18,7 @@ class CreateNhomtinsTable extends Migration
             $table->string('NT_Ten');
             $table->text('NT_MoTa');
             $table->integer('NT_ViTri');
-            $table->binary('NT_TrangThai');
+            $table->boolean('NT_TrangThai');
             $table->timestamps();
         });
     }
