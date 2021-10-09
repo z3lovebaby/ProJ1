@@ -95,7 +95,7 @@ Route::prefix('admin')->group(function () {
             'as'=>'sachs.index',
             'uses'=>'App\Http\Controllers\SachController@index',
         ]);
-        Route::get('/create',[
+        Route::post('/create',[
             'as'=>'sachs.create',
             'uses'=>'App\Http\Controllers\SachController@create',
         ]);
