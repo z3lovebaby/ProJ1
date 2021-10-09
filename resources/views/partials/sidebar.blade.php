@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="" class="brand-link">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVqoDMovFUeYh6AqHjGeIgRxUm2BlTagBvoA&usqp=CAUg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">Group 1</span>
     </a>
 
     <!-- Sidebar -->
@@ -14,7 +14,7 @@
           <img src="https://images.unsplash.com/photo-1515871204537-49a5fe66a31f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGhlYXJ0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">Group 1</a>
         </div>
       </div>
 
@@ -86,11 +86,11 @@
           </li>
 
           <li class="nav-item">
-            <a href="{{route('settings.index')}}" class="nav-link">
+            <a href="{{route('news.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-              News
-                
+                News
+                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>

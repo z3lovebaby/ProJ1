@@ -99,6 +99,10 @@ Route::prefix('admin')->group(function () {
             'as'=>'sachs.create',
             'uses'=>'App\Http\Controllers\SachController@create',
         ]);
+        Route::post('/store',[
+            'as'=>'sachs.store',
+            'uses'=>'App\Http\Controllers\SachController@store',
+        ]);
     });
 
 
@@ -144,6 +148,45 @@ Route::prefix('admin')->group(function () {
             SettingAdminController::class, 'delete'
         ])->name('settings.delete');
         
+    });
+    Route::prefix('News')->group(function (){
+        Route::get('/',[
+            'as'=>'news.index',
+            'uses'=>'App\Http\Controllers\NewsController@index',
+        ]);
+
+        //nhom tin
+        Route::get('/create',[
+            'as'=>'news.create',
+            'uses'=>'App\Http\Controllers\NewsController@create',
+        ]);
+        Route::post('/store',[
+            'as'=>'news.store',
+            'uses'=>'App\Http\Controllers\NewsController@store',
+        ]);
+        Route::get('/edit/{id}',[
+            'as'=>'news.edit',
+            'uses'=>'App\Http\Controllers\NewsController@edit',
+        ]);
+          Route::get('/delete/{id}',[
+            'as'=>'news.delete',
+            'uses'=>'App\Http\Controllers\NewsController@delete',
+        ]);
+          Route::post('/update/{id}',[
+            'as'=>'news.update',
+            'uses'=>'App\Http\Controllers\NewsController@update',
+        ]);
+
+        //tin tuc
+        Route::get('/createnews',[
+            'as'=>'news.createnews',
+            'uses'=>'App\Http\Controllers\NewsnewsController@create',
+        ]);
+        Route::post('/storenews',[
+            'as'=>'news.storenews',
+            'uses'=>'App\Http\Controllers\NewsnewsController@store',
+        ]);
+
     });
     
 });

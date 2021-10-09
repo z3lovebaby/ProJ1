@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Sach extends Model
-{
+{   protected $cast=['S_TuKhoa'=>'array'];
     use HasFactory;
 
     protected $fillable = [

@@ -24,7 +24,7 @@ class CreateTintucsTable extends Migration
             $table->integer('TT_HienThi');
             $table->unsignedBigInteger('TT_NhomTin');
             $table->foreign('TT_NhomTin')->references('id')->on('nhomtins')->onDelete('cascade');
-            $table->boolean('TT_TrangThai');
+            $table->boolean('TT_TrangThai')->nullable();
             $table->timestamps();
         });
     }
