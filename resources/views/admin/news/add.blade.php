@@ -8,7 +8,7 @@
  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    @include('partials.content-header',['name'=>'Newsgroup','key'=>'List'])
+    @include('partials.content-header',['name'=>'NEWSGROUP','key'=>'LIST'])
     <!-- /.content-header -->
 
 
@@ -21,21 +21,21 @@
             <form action="{{ route('news.store') }}" method="post">
                 @csrf
               <div class="form-group">
-                <label>Tên nhóm tin</label>
+                <label>TÊN NHÓM TIN</label>
                 <input type="text" class="form-control" name="NT_Ten"
                         placeholder="Nhập nhóm tin">
                 
-                <label>Mô tả</label>
+                <label>MÔ TẢ</label>
                 <input type="text" class="form-control" name="NT_MoTa"
                         placeholder="Nhập mô tả">
                 
-                <label>Vị trí</label>
+                <label>VỊ TRÍ</label>
                 <select class="form-control" name="NT_ViTri">
-                  <option value="0">Chọn vị trí</option>
+                  <option value="0">CHỌN VỊ TRÍ</option>
                   {!!$htmlOption!!}
                 </select>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">SUBMIT</button>
             </form>
           </div>
         </div>
