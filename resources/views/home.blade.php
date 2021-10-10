@@ -16,7 +16,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            Quynhh cute
+            Group 1
           </div>
          
         </div>

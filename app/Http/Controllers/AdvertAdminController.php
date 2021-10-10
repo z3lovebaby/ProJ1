@@ -92,6 +92,7 @@ class AdvertAdminController extends Controller
 
         ],200);
 
+
     }
     catch (Exception $exception) {
        
@@ -100,7 +101,9 @@ class AdvertAdminController extends Controller
             'code'=>500,
             'message'=>'fail',
 
+
         ],500);
+
     }
    }
 }
