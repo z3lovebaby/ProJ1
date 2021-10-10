@@ -33,16 +33,22 @@
                </tr>
              </thead>
              <tbody>
-              {{-- @foreach ($categories as $danhmucsach)
+              @foreach ($saches as $item)
                <tr>
-                 <th scope="row">{{$danhmucsach->id}}</th>
-                 <td>{{$danhmucsach->DMS_Tieude}}</td>
+                 <th scope="row">{{$item->id}}</th>
+                 <td>{{$item->S_Ten}}</td>
+                 <td>{{number_format($item->S_GiaBan)}}</td>
+                 <td><img class="S_Anh w-25 "src="{{$item->S_ViTri}}"></td>
+                 <td>{{optional($item->Danhmucsachs)->DMS_Tieude}}</td>
+                 <td>{{$item->S_SoLuong}}</td>
+                 <td>{{$item->S_Chitiet}}</td>
                  <td>
-                   <a href="{{route('sachs.edit',['id'=>$danhmucsach->id])}}" class="btn btn-default">Edit</a>
-                   <a href="{{route('sachs.delete',['id'=>$danhmucsach->id])}}" class="btn btn-danger">Delete</a>
+                   <a href="{{route('sachs.edit',['id'=>$item->id])}}" class="btn btn-default">EDIT</a>
+                   <a href="" data-url="{{route('sachs.delete',['id'=>$item->id])}}"
+                   class="btn btn-danger action_delete">DELETE</a>
                  </td>
                </tr>
-               @endforeach --}}
+               @endforeach
              </tbody>
            </table>
          </div>
@@ -59,6 +65,14 @@
  </div>
  <!-- /.content-wrapper -->
 @endsection
+@section('js')
 
+    
+    <script src="{{asset('vendors/select2/select2.min.js')}}"></script>
+    <script src="/path-to-your-tinymce/tinymce.min.js"></script>
+    <script src="{{asset('admins/sach/add/add.js')}}"></script>
+    <script src="{{asset('vendors/SweetAlert2/sweetalert2@11.js')}}"></script>
+    <script src="{{asset('admins/sach/add/delete.js')}}"></script>
+@endsection
 
 

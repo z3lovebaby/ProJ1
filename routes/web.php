@@ -95,7 +95,7 @@ Route::prefix('admin')->group(function () {
             'as'=>'sachs.index',
             'uses'=>'App\Http\Controllers\SachController@index',
         ]);
-        Route::post('/create',[
+        Route::get('/create',[
             'as'=>'sachs.create',
             'uses'=>'App\Http\Controllers\SachController@create',
         ]);
@@ -103,6 +103,19 @@ Route::prefix('admin')->group(function () {
             'as'=>'sachs.store',
             'uses'=>'App\Http\Controllers\SachController@store',
         ]);
+        Route::get('/edit/{id}',[
+            'as'=>'sachs.edit',
+            'uses'=>'App\Http\Controllers\SachController@edit',
+        ]);
+        Route::post('/update/{id}',[
+            'as'=>'sachs.update',
+            'uses'=>'App\Http\Controllers\SachController@update',
+        ]);
+        Route::get('/delete/{id}',[
+            'as'=>'sachs.delete',
+            'uses'=>'App\Http\Controllers\SachController@delete',
+        ]);
+    
     });
 
 

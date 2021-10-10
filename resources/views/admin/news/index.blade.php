@@ -21,9 +21,9 @@
              <thead>
                <tr>
                  <th scope="col">#</th>
-                 <th scope="col">Tên danh mục</th>
-                 <th scope="col">Mô tả</th>
-                 <th scope="col">Action</th>
+                 <th scope="col">TÊN DANH MỤC</th>
+                 <th scope="col">MÔ TẢ</th>
+                 <th scope="col">ACTION</th>
                </tr>
              </thead>
              <tbody>
@@ -33,8 +33,8 @@
                   <td>{{ $nhomtin->NT_Ten }}</td>
                   <td>{{ $nhomtin->NT_MoTa }}</td>
                   <td>
-                    <a href="{{ route('news.edit', ['id' => $nhomtin->id]) }}" class="btn btn-default">Edit</a>
-                    <a href="{{ route('news.delete', ['id' => $nhomtin->id]) }}" class="btn btn-danger">Delete</a>
+                    <a href="{{ route('news.edit', ['id' => $nhomtin->id]) }}" class="btn btn-default">EDIT</a>
+                    <a href="{{ route('news.delete', ['id' => $nhomtin->id]) }}" class="btn btn-danger">DELETE</a>
                   </td>
                 </tr>
                @endforeach
