@@ -51,6 +51,7 @@ class NewsController extends Controller
         return redirect()->route('news.index');
     }
     public function delete($id){
-        
+        $this->nhomtin->find($id)->delete();
+        return redirect()->route('news.index');
     }
 }
