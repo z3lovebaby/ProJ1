@@ -6,19 +6,29 @@ use App\Models\Tintuc;
 // use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Components\NewsnewsRecusive;
+use App\Components\NewsRecusive;
+use App\Models\Nhomtin;
 
 class NewsnewsController extends Controller
 {
     private $tintuc;
-    public function __construct(Tintuc $tintuc)
+    private $nhomtin;
+    public function __construct(Nhomtin $nhomtin)
     {
-        $this->tintuc = $tintuc;
+        $this->nhomtin = $nhomtin;
     }
     public function create(){
-        $data = $this->tintuc->all();
-        $recusive = new NewsnewsRecusive($data);
-        $htmlOption = $recusive->tintucRecusive();
-        return view('admin.news.addnews', compact('htmlOption')); 
+        $htmOption = $this->getNhomtin($NT_ViTri = '');
+        // $data = $this->tintuc->all();
+        // $recusive = new NewsnewsRecusive($data);
+        // $htmlOption = $recusive->tintucRecusive();
+        return view('admin.news.addnews', compact('htmOption')); 
+    }
+    public function getNhomtin($NT_ViTri){
+        $data = $this->nhomtin->all();
+        $recusive = new NewsRecusive($data);
+        $htmlOption = $recusive->nhomtinRecusive($NT_ViTri);
+        return $htmlOption;
     }
     public function store(Request $request){
         $this->tintuc->create([

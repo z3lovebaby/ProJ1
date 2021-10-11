@@ -47,7 +47,7 @@
                 <label>Nhóm tin</label>
                 <select class="form-control" name="TT_NhomTin">
                   <option value="0">Chọn nhóm tin</option>
-                  {!!$htmlOption!!}
+                  {!!$htmOption!!}
                 </select>
 
               </div>
