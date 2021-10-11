@@ -29,7 +29,7 @@
   ```
 -->
 
-<!-- <div class="fb-login-button" >Login with Facebookfgdfgasfd</div> -->
+<!-- <div class="fb-login-button" >Login with Facebook</div> -->
 <div class="min-h-screen flex items-center justify-center bg-blue-100 py-12 px-4 sm:px-6 lg:px-8">
  
    
