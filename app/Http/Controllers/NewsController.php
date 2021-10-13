@@ -3,23 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Models\Nhomtin;
+use App\Models\Tintuc;
 use Illuminate\Http\Request;
 use App\Components\NewsRecusive;
 
 class NewsController extends Controller
 {
+    private $tintuc;
     private $nhomtin;
-    public function __construct(Nhomtin $nhomtin)
+    public function __construct(Nhomtin $nhomtin, Tintuc $tintuc)
     {
         $this->nhomtin = $nhomtin;
+        $this->tintuc = $tintuc;
     }
     public function create(){
         $htmlOption = $this->getNhomtin($NT_ViTri = '');
         return view('admin.news.add', compact('htmlOption')); 
     }
     public function index(){
-        $nhomtins = $this->nhomtin->latest()->paginate(5);
-        return view('admin.news.index', compact('nhomtins')); 
+        $nhomtins = $this->nhomtin->latest()->paginate(3);
+        $tintucs = $this->tintuc->latest()->paginate(3);
+        return view('admin.news.index', compact('nhomtins'), compact('tintucs')); 
     }
     public function store(Request $request){
         $this->nhomtin->create([

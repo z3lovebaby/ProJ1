@@ -28,6 +28,7 @@
                 
                 <label>Mô tả</label>
                 <input type="text" class="form-control" name="NT_MoTa"
+                        value="{{ $nhomtin->NT_MoTa }}"
                         placeholder="Nhập mô tả">
                 
                 <label>Vị trí</label>

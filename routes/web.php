@@ -181,11 +181,11 @@ Route::prefix('admin')->group(function () {
             'as'=>'news.edit',
             'uses'=>'App\Http\Controllers\NewsController@edit',
         ]);
-          Route::get('/delete/{id}',[
+        Route::get('/delete/{id}',[
             'as'=>'news.delete',
             'uses'=>'App\Http\Controllers\NewsController@delete',
         ]);
-          Route::post('/update/{id}',[
+        Route::post('/update/{id}',[
             'as'=>'news.update',
             'uses'=>'App\Http\Controllers\NewsController@update',
         ]);
@@ -198,6 +198,18 @@ Route::prefix('admin')->group(function () {
         Route::post('/storenews',[
             'as'=>'news.storenews',
             'uses'=>'App\Http\Controllers\NewsnewsController@store',
+        ]);
+        Route::get('/editnews/{id}',[
+            'as'=>'news.editnews',
+            'uses'=>'App\Http\Controllers\NewsnewsController@edit',
+        ]);
+        Route::get('/deletenews/{id}',[
+            'as'=>'news.deletenews',
+            'uses'=>'App\Http\Controllers\NewsnewsController@delete',
+        ]);
+        Route::post('/updatenews/{id}',[
+            'as'=>'news.updatenews',
+            'uses'=>'App\Http\Controllers\NewsnewsController@update',
         ]);
 
     });

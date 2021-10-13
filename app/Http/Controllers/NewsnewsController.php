@@ -45,4 +45,30 @@ class NewsnewsController extends Controller
         ]);
         return redirect()->route('news.index');
     }
+    public function edit($id){
+        $tintuc = $this->tintuc->find($id);
+        $htmlOption = $this->getNhomtin($tintuc->TT_NhomTin);
+        $data1 = $this->tintuc->all();
+        $recusive = new NewsnewsRecusive($data1);
+        $html1Option = $recusive->tintucRecusive($id);
+        return view('admin.news.editnews', compact('tintuc', 'htmlOption'));
+    }
+    public function update($id, Request $request){
+        $this->tintuc->find($id)->update([
+            'TT_TieuDe' => $request->TT_TieuDe,
+            'TT_TacGia' => $request->TT_TacGia,
+            'TT_Ngay' => $request->TT_Ngay,
+            'TT_MoTa' => $request->TT_MoTa,
+            'TT_NoiDung' => $request->TT_NoiDung,
+            'TT_Anh' => $request->TT_Anh,
+            'TT_HienThi' => $request->TT_HienThi,
+            'TT_NhomTin' => $request->TT_NhomTin,
+
+        ]);
+        return redirect()->route('news.index');
+    }
+    public function delete($id){
+        $this->tintuc->find($id)->delete();
+        return redirect()->route('news.index');
+    }
 }
