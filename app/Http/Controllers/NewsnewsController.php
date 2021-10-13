@@ -13,15 +13,17 @@ class NewsnewsController extends Controller
 {
     private $tintuc;
     private $nhomtin;
-    public function __construct(Nhomtin $nhomtin)
+    public function __construct(Nhomtin $nhomtin, Tintuc $tintuc)
     {
         $this->nhomtin = $nhomtin;
+        $this->tintuc = $tintuc;
     }
+
     public function create(){
         $htmOption = $this->getNhomtin($NT_ViTri = '');
-        // $data = $this->tintuc->all();
-        // $recusive = new NewsnewsRecusive($data);
-        // $htmlOption = $recusive->tintucRecusive();
+        $data = $this->tintuc->all();
+        $recusive = new NewsnewsRecusive($data);
+        $html1Option = $recusive->tintucRecusive();
         return view('admin.news.addnews', compact('htmOption')); 
     }
     public function getNhomtin($NT_ViTri){

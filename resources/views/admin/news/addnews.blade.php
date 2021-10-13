@@ -6,7 +6,7 @@
  @endsection
  @section('content')
   <div class="content-wrapper">
-    @include('partials.content-header',['name'=>'NEWS','key'=>'LIST'])
+    @include('partials.content-header',['name'=>'News','key'=>'lish'])
 
 
     <div class="content">
@@ -16,35 +16,35 @@
             <form action="{{ route('news.storenews') }}" method="post">
                 @csrf
               <div class="form-group">
-                <label>TIÊU ĐỀ</label>
+                <label>Tiêu đề</label>
                 <input type="text" class="form-control" name="TT_TieuDe"
                         placeholder="Nhập tiêu đề">
 
-                <label>TÁC GIẢ</label>
+                <label>Tác giả</label>
                 <input type="text" class="form-control" name="TT_TacGia"
                         placeholder="Nhập tên tác giả">
 
-                <label>NGÀY</label>
+                <label>Ngày</label>
                 <input type="date" class="form-control" name="TT_Ngay"
                         placeholder="Nhập ngày">
                 
-                <label>MÔ TẢ</label>
+                <label>Mô tả</label>
                 <input type="text" class="form-control" name="TT_MoTa"
                         placeholder="Nhập mô tả">
 
-                <label>NỘI DUNG</label>
+                <label>Nội dung</label>
                 <input type="text" class="form-control" name="TT_NoiDung"
                         placeholder="Nhập nội dung">
                 
-                <label>ẢNH</label>
+                <label>Ảnh</label>
                 <input type="file" class="form-control" name="TT_Anh"
                         placeholder="Nhập ảnh">
                 
-                <label>HIỂN THỊ</label>
+                <label>Hiển thị</label>
                 <input type="number" class="form-control" name="TT_HienThi"
                         placeholder="Nhập hiển thị">
 
-                <label>NHÓM TIN</label>
+                <label>Nhóm tin</label>
                 <select class="form-control" name="TT_NhomTin">
                   <option value="0">Chọn nhóm tin</option>
                   {!!$htmOption!!}
