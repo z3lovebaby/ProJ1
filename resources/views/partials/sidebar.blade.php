@@ -33,14 +33,12 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="{{route('categories.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-               DANH MUC SP
-                <span class="right badge badge-danger">New</span>
+                Danh mục sản phẩm
+                <!-- <span class="right badge badge-danger">New</span> -->
               </p>
             </a>
           </li>
@@ -66,6 +64,25 @@
           </li>
           
           <li class="nav-item">
+            <a href="{{route('nxbs.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Nhà xuất bản
+                <span class="right badge badge-danger">Nxb</span>
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{route('tacgias.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Tác giả
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{route('advert.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
@@ -89,7 +106,17 @@
             <a href="{{route('news.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                News
+                Nhóm tin
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Tin tức
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
@@ -97,7 +124,5 @@
 
         </ul>
       </nav>
-      <!-- /.sidebar-menu -->
     </div>
-    <!-- /.sidebar -->
   </aside>

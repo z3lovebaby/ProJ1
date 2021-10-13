@@ -214,4 +214,58 @@ Route::prefix('admin')->group(function () {
 
     });
     
+    Route::prefix('nxbs')->group(function (){
+        Route::get('/',[
+            'as'=>'nxbs.index',
+            'uses'=>'App\Http\Controllers\NXBController@index',
+        ]);
+        Route::get('/create',[
+            'as'=>'nxbs.create',
+            'uses'=>'App\Http\Controllers\NXBController@create',
+        ]);
+        Route::post('/store',[
+            'as'=>'nxbs.store',
+            'uses'=>'App\Http\Controllers\NXBController@store',
+        ]);
+         Route::get('/edit/{id}',[
+            'as'=>'nxbs.edit',
+            'uses'=>'App\Http\Controllers\NXBController@edit',
+        ]);
+          Route::post('/update/{id}',[
+            'as'=>'nxbs.update',
+            'uses'=>'App\Http\Controllers\NXBController@update',
+        ]);
+        Route::get('/delete/{id}',[
+            'as'=>'nxbs.delete',
+            'uses'=>'App\Http\Controllers\NXBController@delete',
+        ]);
+    });
+
+    Route::prefix('tacgias')->group(function (){
+        Route::get('/',[
+            'as'=>'tacgias.index',
+            'uses'=>'App\Http\Controllers\TacgiaController@index',
+        ]);
+        Route::get('/create',[
+            'as'=>'tacgias.create',
+            'uses'=>'App\Http\Controllers\TacgiaController@create',
+        ]);
+        Route::post('/store',[
+            'as'=>'tacgias.store',
+            'uses'=>'App\Http\Controllers\TacgiaController@store',
+        ]);
+        Route::get('/edit/{id}',[
+            'as'=>'tacgias.edit',
+            'uses'=>'App\Http\Controllers\TacgiaController@edit',
+        ]);
+        Route::post('/update/{id}',[
+            'as'=>'tacgias.update',
+            'uses'=>'App\Http\Controllers\TacgiaController@update',
+        ]);
+        Route::get('/delete/{id}',[
+            'as'=>'tacgias.delete',
+            'uses'=>'App\Http\Controllers\TacgiaController@delete',
+        ]);
+    });
+    
 });
