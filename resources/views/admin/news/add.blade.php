@@ -5,37 +5,53 @@
  </title>
  @endsection
  @section('content')
- <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    @include('partials.content-header',['name'=>'Newsgroup','key'=>'lish'])
-    <!-- /.content-header -->
+    @include('partials.content-header',['name'=>'News','key'=>'lish'])
 
 
-
-    <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6">
-            <form action="{{ route('news.store') }}" method="post">
+            <form action="{{ route('news.storenews') }}" method="post">
                 @csrf
               <div class="form-group">
-                <label>Tên nhóm tin</label>
-                <input type="text" class="form-control" name="NT_Ten"
-                        placeholder="Nhập nhóm tin">
+                <label>Tiêu đề</label>
+                <input type="text" class="form-control" name="TT_TieuDe"
+                        placeholder="Nhập tiêu đề">
+
+                <label>Tác giả</label>
+                <input type="text" class="form-control" name="TT_TacGia"
+                        placeholder="Nhập tên tác giả">
+
+                <label>Ngày</label>
+                <input type="datetime-local" class="form-control" name="TT_Ngay"
+                        placeholder="Nhập ngày">
                 
                 <label>Mô tả</label>
-                <input type="text" class="form-control" name="NT_MoTa"
+                <input type="text" class="form-control" name="TT_MoTa"
                         placeholder="Nhập mô tả">
+
+                <label>Nội dung</label>
+                <input type="text" class="form-control" name="TT_NoiDung"
+                        placeholder="Nhập nội dung">
                 
-                <label>Vị trí</label>
-                <select class="form-control" name="NT_ViTri">
-                  <option value="0">Chọn vị trí cao nhất</option>
-                  {!!$htmlOption!!}
+                <label>Ảnh</label>
+                <input type="file" class="form-control" name="TT_Anh"
+                        placeholder="Nhập ảnh">
+                
+                <label>Hiển thị</label>
+                <input type="number" class="form-control" name="TT_HienThi"
+                        placeholder="Nhập hiển thị">
+
+                <label>Nhóm tin</label>
+                <select class="form-control" name="TT_NhomTin">
+                  <option value="0">Chọn nhóm tin</option>
+                  {!!$htmOption!!}
                 </select>
+
               </div>
-              <button type="submit" class="btn btn-primary">SUBMIT</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </div>
         </div>

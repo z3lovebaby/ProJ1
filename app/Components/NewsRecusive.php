@@ -1,7 +1,7 @@
 <?php
     namespace App\Components;
-    use App\Models\Nhomtin;
-    class NewsRecusive{
+    use App\Models\Tintuc;
+    class NewsnewsRecusive{
         private $data;
         private $htmlSelect = '';
         public function __construct($data)
@@ -9,17 +9,10 @@
             $this->data = $data;
         }
 
-        public function nhomtinRecusive($NT_ViTri, $id = 0, $text='')
+        public function tintucRecusive($id = 0, $text='')
         {
             foreach ($this->data as $value) {
-                if($value['NT_ViTri'] == $id){
-                    if( !empty($NT_ViTri) && $NT_ViTri==$value['id'] ){
-                        $this->htmlSelect .= "<option selected value='".$value['id']."'>" . $text . $value['NT_Ten'] . "</option>";
-                    } else {
-                        $this->htmlSelect .= "<option value='".$value['id']."'>" . $text . $value['NT_Ten'] . "</option>";
-                    }
-                    $this->nhomtinRecusive($NT_ViTri, $value['id'], $text.'--');
-                }
+                $this->htmlSelect .= "<option value='".$value['id']."'>" . $text . $value['TT_TieuDe'] . "</option>";
             }
             return $this->htmlSelect;
         }

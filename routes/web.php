@@ -162,13 +162,38 @@ Route::prefix('admin')->group(function () {
         ])->name('settings.delete');
         
     });
+    Route::prefix('Newsgroup')->group(function (){
+        Route::get('/',[
+            'as'=>'newsgroup.index',
+            'uses'=>'App\Http\Controllers\NewsgroupController@index',
+        ]);
+        Route::get('/create',[
+            'as'=>'newsgroup.create',
+            'uses'=>'App\Http\Controllers\NewsgroupController@create',
+        ]);
+        Route::post('/store',[
+            'as'=>'newsgroup.store',
+            'uses'=>'App\Http\Controllers\NewsgroupController@store',
+        ]);
+        Route::get('/edit/{id}',[
+            'as'=>'newsgroup.edit',
+            'uses'=>'App\Http\Controllers\NewsgroupController@edit',
+        ]);
+        Route::get('/delete/{id}',[
+            'as'=>'newsgroup.delete',
+            'uses'=>'App\Http\Controllers\NewsgroupController@delete',
+        ]);
+        Route::post('/update/{id}',[
+            'as'=>'newsgroup.update',
+            'uses'=>'App\Http\Controllers\NewsgroupController@update',
+        ]);
+
+    });
     Route::prefix('News')->group(function (){
         Route::get('/',[
             'as'=>'news.index',
             'uses'=>'App\Http\Controllers\NewsController@index',
         ]);
-
-        //nhom tin
         Route::get('/create',[
             'as'=>'news.create',
             'uses'=>'App\Http\Controllers\NewsController@create',
@@ -188,28 +213,6 @@ Route::prefix('admin')->group(function () {
         Route::post('/update/{id}',[
             'as'=>'news.update',
             'uses'=>'App\Http\Controllers\NewsController@update',
-        ]);
-
-        //tin tuc
-        Route::get('/createnews',[
-            'as'=>'news.createnews',
-            'uses'=>'App\Http\Controllers\NewsnewsController@create',
-        ]);
-        Route::post('/storenews',[
-            'as'=>'news.storenews',
-            'uses'=>'App\Http\Controllers\NewsnewsController@store',
-        ]);
-        Route::get('/editnews/{id}',[
-            'as'=>'news.editnews',
-            'uses'=>'App\Http\Controllers\NewsnewsController@edit',
-        ]);
-        Route::get('/deletenews/{id}',[
-            'as'=>'news.deletenews',
-            'uses'=>'App\Http\Controllers\NewsnewsController@delete',
-        ]);
-        Route::post('/updatenews/{id}',[
-            'as'=>'news.updatenews',
-            'uses'=>'App\Http\Controllers\NewsnewsController@update',
         ]);
 
     });

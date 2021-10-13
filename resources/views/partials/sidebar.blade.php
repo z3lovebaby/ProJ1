@@ -37,7 +37,7 @@
             <a href="{{route('categories.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Danh mục sản phẩm
+                Danh mục sách
                 <!-- <span class="right badge badge-danger">New</span> -->
               </p>
             </a>
@@ -78,7 +78,7 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Tác giả
-                <span class="right badge badge-danger">New</span>
+                <span class="right badge badge-danger">Tg</span>
               </p>
             </a>
           </li>

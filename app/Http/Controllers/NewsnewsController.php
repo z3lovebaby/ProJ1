@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tintuc;
-// use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Components\NewsnewsRecusive;
 use App\Components\NewsRecusive;
 use App\Models\Nhomtin;
+use App\Http\Controllers\Controller;
 
 class NewsnewsController extends Controller
 {
