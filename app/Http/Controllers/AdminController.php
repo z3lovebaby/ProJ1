@@ -11,11 +11,7 @@ session_start();
 
 class AdminController extends Controller
 {
-    use AuthAdminTrait;
-    public function home(){
-        $this->AuthLogin();
-        return view('home');
-    }
+   
     public function AuthLogin(){
         $id=session()->get('id');
         if($id){

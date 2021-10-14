@@ -4,6 +4,17 @@
   Sách
 </title>
 @endsection
+@section('css')
+<style> .S_Anh {
+    width: 150px;
+    height: 100px;
+}
+</style>
+@endsection
+
+
+
+ 
 @section('content')
 <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
@@ -38,7 +49,7 @@
                  <th scope="row">{{$item->id}}</th>
                  <td>{{$item->S_Ten}}</td>
                  <td>{{number_format($item->S_GiaBan)}}</td>
-                 <td><img class="S_Anh w-25 "src="{{$item->S_ViTri}}"></td>
+                 <td><img class="S_Anh  "src="{{$item->S_ViTri}}"></td>
                  <td>{{optional($item->Danhmucsachs)->DMS_Tieude}}</td>
                  <td>{{$item->S_SoLuong}}</td>
                  <td>{{$item->S_Chitiet}}</td>
