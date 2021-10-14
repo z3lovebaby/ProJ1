@@ -9,6 +9,7 @@ use App\Models\Danhmucsach;
 use App\Models\Nxb;
 use App\Models\Sach;
 use App\Models\Tacgia;
+use App\Traits\AuthAdminTrait;
 use App\Traits\StorageImageTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -19,6 +20,7 @@ use Illuminate\Support\Facades\DB;
 
 class SachController extends Controller
 {   
+    use AuthAdminTrait;
     use StorageImageTrait;
     private $category;
     private $sp;
@@ -26,6 +28,7 @@ class SachController extends Controller
     private $tacgia;
     private $htmlSelect = '';
     private $htmlSelect2 = '';
+    
     public function __construct(Danhmucsach $category,Sach $sp,Tacgia $tacgia,Nxb $nxb)
     {
        
@@ -37,13 +40,14 @@ class SachController extends Controller
     }
     
         public function index(){
+            $this->AuthLogin();
             $saches=$this->sp->paginate(5);
             return view ('admin.sachs.index',compact('saches'));
         }
         
     public function create()
         {
-
+            $this->AuthLogin();
             $htmlOption=$this->getCategory($parentId='');
             $htmlOptionn=$this->getTacgia($id='');    
             $htmlOptionnn=$this->getNXB($id='');     

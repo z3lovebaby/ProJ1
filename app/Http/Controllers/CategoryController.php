@@ -8,9 +8,10 @@ use App\Components\Recusive;
 use Exception;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
-
+use App\Traits\AuthAdminTrait;
 class CategoryController extends Controller
 {   private $danhmucsach;
+    use AuthAdminTrait;
     public function __construct(Danhmucsach $danhmucsach)
     {
        
@@ -18,13 +19,14 @@ class CategoryController extends Controller
     }
     public function create()
     {
-
+        $this->AuthLogin();
         $htmlOption=$this->getCategory($parentId='');
                     
         return view ('admin.category.add',compact('htmlOption'));
     }
     
     public function index(){
+        $this->AuthLogin();
         $categories=$this->danhmucsach->latest()->paginate(5);
         return view ('admin.category.index',compact('categories'));
     }

@@ -8,11 +8,13 @@ use Illuminate\Http\Request;
 use App\Components\NewsgroupRecusive;
 use App\Components\NewsRecusive;
 use App\Http\Controllers\Controller;
-
+use App\Traits\AuthAdminTrait;
 class NewsController extends Controller
 {
+    
     private $tintuc;
     private $nhomtin;
+    use AuthAdminTrait;
     public function __construct(Nhomtin $nhomtin, Tintuc $tintuc)
     {
         $this->nhomtin = $nhomtin;
@@ -20,6 +22,7 @@ class NewsController extends Controller
     }
 
     public function create(){
+        $this->AuthLogin();
         $htmOption = $this->getNhomtin($NT_ViTri = '');
         $data = $this->tintuc->all();
         $recusive = new NewsRecusive($data);
@@ -27,6 +30,7 @@ class NewsController extends Controller
         return view('admin.news.add', compact('htmOption')); 
     }
     public function index(){
+        $this->AuthLogin();
         $tintucs = $this->tintuc->latest()->paginate(3);
         return view('admin.news.index', compact('tintucs')); 
     }

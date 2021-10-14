@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Nxb;
 use App\Http\Controllers\Controller;
+use App\Traits\AuthAdminTrait;
 use Illuminate\Http\Request;
 use Exception;
 use Illuminate\Support\Facades\Log;
@@ -12,15 +13,18 @@ class NXBController extends Controller
 {
     private $nxb;
     private $htmlSelect = '';
+    use AuthAdminTrait;
     public function __construct(Nxb $nxb)
     {
         $this->nxb = $nxb;
     }
     public function create(){
+        $this->AuthLogin();
         $htmlOption = $this->getNXB($id = '');
         return view('admin.nxbs.add', compact('htmlOption')); 
     }
     public function index(){
+        $this->AuthLogin();
         $nxbs = $this->nxb->latest()->paginate(3);
         return view('admin.nxbs.index', compact('nxbs')); 
     }

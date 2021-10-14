@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Traits\AuthAdminTrait;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,6 +11,11 @@ session_start();
 
 class AdminController extends Controller
 {
+    use AuthAdminTrait;
+    public function home(){
+        $this->AuthLogin();
+        return view('home');
+    }
     public function AuthLogin(){
         $id=session()->get('id');
         if($id){

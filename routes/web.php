@@ -4,7 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdvertAdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SettingAdminController;
-
+use App\Traits\AuthAdminTrait;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,9 +22,9 @@ Route::get('/logout', [
     AdminController::class, 'logoutAdmin'
 ])->name('logoutAdmin');
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/home', [
+    AdvertAdminController::class,'home'
+]);
 
 
 Route::prefix('admin')->group(function () {

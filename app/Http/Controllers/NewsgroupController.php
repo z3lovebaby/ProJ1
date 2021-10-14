@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Traits\AuthAdminTrait;
 use App\Models\Nhomtin;
 use App\Models\Tintuc;
 use App\Http\Controllers\Controller;
@@ -13,16 +13,19 @@ class NewsgroupController extends Controller
 {
     private $tintuc;
     private $nhomtin;
+    use AuthAdminTrait;
     public function __construct(Nhomtin $nhomtin, Tintuc $tintuc)
     {
         $this->nhomtin = $nhomtin;
         $this->tintuc = $tintuc;
     }
     public function create(){
+        $this->AuthLogin();
         $htmlOption = $this->getNhomtin($NT_ViTri = '');
         return view('admin.newsgroup.add', compact('htmlOption')); 
     }
     public function index(){
+        $this->AuthLogin();
         $nhomtins = $this->nhomtin->latest()->paginate(3);
         return view('admin.newsgroup.index', compact('nhomtins')); 
     }

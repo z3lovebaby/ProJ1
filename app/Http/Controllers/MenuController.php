@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Components\MenuRecusive;
 use App\Models\Menu;
+use App\Traits\AuthAdminTrait;
 use Illuminate\Http\Request;
 use Illuminate\support\str;
 use Exception;
@@ -12,6 +13,7 @@ use Illuminate\Support\Facades\DB;
 class MenuController extends Controller
 {   private $menuRecusive;
     private $menu;
+    use AuthAdminTrait;
     public function __construct(MenuRecusive $menuRecusive, Menu $menu)
     {
         $this->menuRecusive=$menuRecusive;
@@ -19,13 +21,14 @@ class MenuController extends Controller
     }
 
     public function index(){
+        $this->AuthLogin();
         $menus=$this->menu->latest()->paginate(10);
         return view ('admin.menus.index',compact('menus'));
     }
 
     public function create()
     {
-
+        $this->AuthLogin();
         // $htmlOption=$this->getCategory($parentId='');
         $optionSelect=$this->menuRecusive->menuRecusiveAdd();         
         return view ('admin.menus.add',compact('optionSelect'));

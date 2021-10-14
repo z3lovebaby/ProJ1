@@ -7,9 +7,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Exception;
 use Illuminate\Support\Facades\Log;
-
+use App\Traits\AuthAdminTrait;
 class TacgiaController extends Controller
-{
+{   
+    use AuthAdminTrait;
     private $tacgia;
     private $htmlSelect = '';
     public function __construct(Tacgia $tacgia)
@@ -17,10 +18,12 @@ class TacgiaController extends Controller
         $this->tacgia = $tacgia;
     }
     public function create(){
+        $this->AuthLogin();
         $htmlOption = $this->getTacgia($id = '');
         return view('admin.tacgias.add', compact('htmlOption')); 
     }
     public function index(){
+        $this->AuthLogin();
         $tacgias = $this->tacgia->latest()->paginate(3);
         return view('admin.tacgias.index', compact('tacgias')); 
     }

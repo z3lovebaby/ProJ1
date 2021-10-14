@@ -16,6 +16,10 @@ class AdvertAdminController extends Controller
     use StorageImageTrait;
     use AuthAdminTrait;
     private $advert;
+    public function home(){
+        $this->AuthLogin();
+        return view('home');
+    }
     public function __construct(Advert $advert)
     {
         $this->advert=$advert;
