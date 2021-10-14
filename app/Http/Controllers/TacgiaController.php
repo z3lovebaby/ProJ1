@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Tacgia;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Exception;
+use Illuminate\Support\Facades\Log;
 
 class TacgiaController extends Controller
 {
@@ -39,7 +41,7 @@ class TacgiaController extends Controller
                 $this->htmlSelect .= "<option value='".$value['id']."'>" . $value['TG_HoTen'] . "</option>";
             }
         }
-        $htmlOption = $this->htmlSelect;;
+        $htmlOption = $this->htmlSelect;
         return $htmlOption;
     }
 
@@ -56,7 +58,21 @@ class TacgiaController extends Controller
         return redirect()->route('tacgias.index');
     }
     public function delete($id){
-        $this->tacgia->find($id)->delete();
-        return redirect()->route('tacgias.index');
+        try{
+            $this->tacgia->find($id)->delete();
+                    return response()->json([
+                        'code'=>200,
+                        'message'=>'success',
+            
+                    ],200);
+        }
+            catch(Exception $exception){
+                Log::error('Message:' . $exception->getMessage() . 'Line' . $exception->getLine());
+                return response()->json([
+                        'code'=>500,
+                        'message'=>'fail',
+            
+                    ],500);
+        }
     }
 }

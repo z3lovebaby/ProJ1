@@ -34,7 +34,7 @@
                   <td>{{ $nxb->NXB_Mota }}</td>
                   <td>
                     <a href="{{ route('nxbs.edit', ['id' => $nxb->id]) }}" class="btn btn-default">EDIT</a>
-                    <a href="{{ route('nxbs.delete', ['id' => $nxb->id]) }}" class="btn btn-danger">DELETE</a>
+                    <a href=""data-url="{{ route('nxbs.delete', ['id' => $nxb->id]) }}" class="btn btn-danger action_delete">DELETE</a>
                   </td>
                 </tr>
                @endforeach
@@ -49,6 +49,9 @@
     </div>
   </div>
  @endsection
- 
+ @section('js')
+    <script src="{{asset('vendors/SweetAlert2/sweetalert2@11.js')}}"></script>
+    <script src="{{asset('admins/sach/add/delete.js')}}"></script>
+@endsection
  
  

@@ -53,7 +53,22 @@
                 
               </select>
               </div>
+
               <div class="form-group">
+                <label >CHỌN TÁC GIẢ</label>
+                <select class="form-control select2_init" name="S_TacGiaId">
+                  <option value="">CHỌN ĐI CHỜ CHI</option>
+                    {!!$htmlOptionn!!}
+                </select>
+              </div>
+              <div class="form-group">
+                <label >CHỌN NHÀ XUẤT BẢN</label>
+                <select class="form-control " name="S_NXBId">
+                  <option value="">CHỌN ĐI CHỜ CHI</option>
+                    {!!$htmlOptionnn!!}
+                </select>
+              </div>
+              {{-- <div class="form-group">
                 <label for="exampleInputEmail1">NXB</label>
                 <input type="text" class="form-control" name="S_NXBId"
                 placeholder="Nhap ten sách">
@@ -62,7 +77,7 @@
                   <label for="exampleInputEmail1">TÁC GIẢ</label>
                   <input type="text" class="form-control" name="S_TacGiaId"
                   placeholder="Nhap ten sách">
-                  </div>
+                  </div> --}}
             <div class="form-group">
               <label for="exampleInputMota">SỐ LƯỢNG</label>
               <input type="number" class="form-control" placeholder="Nhap vao số lượng" name="S_SoLuong">

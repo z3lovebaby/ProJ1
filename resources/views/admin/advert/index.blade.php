@@ -51,7 +51,7 @@
 
                                 <td>
                                     <a href="{{route('advert.edit',['id'=>$a->id])}}" class="btn btn-default">Sửa</a>
-                                    <a href="" data-url="{{route('advert.delete',['id'=>$a->id])}}" class="btn btn-danger action_delete ">xóa</a>
+                                    <a href=""data-url="{{ route('advert.delete',['id'=>$a->id])}}" class="btn btn-danger action_delete">xóa</a>
                                 </td>
               </tr>
 
@@ -77,7 +77,7 @@
 @endsection
 @section('js')
 <script src="{{asset('vendors/SweetAlert2/sweetalert2@11.js')}}"></script>
-<script src="{{asset('admins/delete/delete.js')}}"></script>
+<script src="{{asset('admins/sach/add/delete.js')}}"></script>
 @endsection
 
 

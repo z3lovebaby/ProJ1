@@ -54,7 +54,7 @@ class SettingAdminController extends Controller
                 'code'=>200,
                 'message'=>'success',
     
-            ],status:200);
+            ],200);
     
         }
         catch (Exception $exception) {
@@ -64,7 +64,7 @@ class SettingAdminController extends Controller
                 'code'=>500,
                 'message'=>'fail',
     
-            ],status:500);
+            ],500);
         }
         
        }

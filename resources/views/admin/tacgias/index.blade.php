@@ -34,7 +34,7 @@
                   <td>{{ $tacgia->TG_Mota }}</td>
                   <td>
                     <a href="{{ route('tacgias.edit', ['id' => $tacgia->id]) }}" class="btn btn-default">EDIT</a>
-                    <a href="{{ route('tacgias.delete', ['id' => $tacgia->id]) }}" class="btn btn-danger">DELETE</a>
+                    <a href=""data-url="{{ route('tacgias.delete', ['id' => $tacgia->id]) }}" class="btn btn-danger action_delete">DELETE</a>
                   </td>
                 </tr>
                @endforeach
@@ -49,6 +49,9 @@
     </div>
   </div>
  @endsection
- 
+ @section('js')
+    <script src="{{asset('vendors/SweetAlert2/sweetalert2@11.js')}}"></script>
+    <script src="{{asset('admins/sach/add/delete.js')}}"></script>
+@endsection
  
  

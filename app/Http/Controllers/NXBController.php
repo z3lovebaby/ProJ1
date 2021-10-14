@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Nxb;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Exception;
+use Illuminate\Support\Facades\Log;
 
 class NXBController extends Controller
 {
@@ -39,7 +41,7 @@ class NXBController extends Controller
                 $this->htmlSelect .= "<option value='".$value['id']."'>" . $value['NXB_Ten'] . "</option>";
             }
         }
-        $htmlOption = $this->htmlSelect;;
+        $htmlOption = $this->htmlSelect;
         return $htmlOption;
     }
 
@@ -56,7 +58,21 @@ class NXBController extends Controller
         return redirect()->route('nxbs.index');
     }
     public function delete($id){
-        $this->nxb->find($id)->delete();
-        return redirect()->route('nxbs.index');
+        try{
+            $this->nxb->find($id)->delete();
+                    return response()->json([
+                        'code'=>200,
+                        'message'=>'success',
+            
+                    ],200);
+        }
+            catch(Exception $exception){
+                Log::error('Message:' . $exception->getMessage() . 'Line' . $exception->getLine());
+                return response()->json([
+                        'code'=>500,
+                        'message'=>'fail',
+            
+                    ],500);
+        }
     }
 }
