@@ -8,7 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Components\\MenuRecusive' => $baseDir . '/app/Components/MenuRecusive.php',
     'App\\Components\\NewsRecusive' => $baseDir . '/app/Components/NewsRecusive.php',
-    'App\\Components\\NewsnewsRecusive' => $baseDir . '/app/Components/NewsnewsRecusive.php',
+    'App\\Components\\NewsgroupRecusive' => $baseDir . '/app/Components/NewsgroupRecusive.php',
     'App\\Components\\Recusive' => $baseDir . '/app/Components/Recusive.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
@@ -19,7 +19,7 @@ return array(
     'App\\Http\\Controllers\\MenuController' => $baseDir . '/app/Http/Controllers/MenuController.php',
     'App\\Http\\Controllers\\NXBController' => $baseDir . '/app/Http/Controllers/NXBController.php',
     'App\\Http\\Controllers\\NewsController' => $baseDir . '/app/Http/Controllers/NewsController.php',
-    'App\\Http\\Controllers\\NewsnewsController' => $baseDir . '/app/Http/Controllers/NewsnewsController.php',
+    'App\\Http\\Controllers\\NewsgroupController' => $baseDir . '/app/Http/Controllers/NewsgroupController.php',
     'App\\Http\\Controllers\\SachController' => $baseDir . '/app/Http/Controllers/SachController.php',
     'App\\Http\\Controllers\\SettingAdminController' => $baseDir . '/app/Http/Controllers/SettingAdminController.php',
     'App\\Http\\Controllers\\TacgiaController' => $baseDir . '/app/Http/Controllers/TacgiaController.php',

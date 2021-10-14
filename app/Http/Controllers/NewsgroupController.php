@@ -7,7 +7,7 @@ use App\Models\Tintuc;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Components\NewsgroupRecusive;
-use App\Components\NewsRecusive;
+// use App\Components\NewsRecusive;
 
 class NewsgroupController extends Controller
 {
@@ -24,8 +24,7 @@ class NewsgroupController extends Controller
     }
     public function index(){
         $nhomtins = $this->nhomtin->latest()->paginate(3);
-        $tintucs = $this->tintuc->latest()->paginate(3);
-        return view('admin.newsgroup.index', compact('nhomtins'), compact('tintucs')); 
+        return view('admin.newsgroup.index', compact('nhomtins')); 
     }
     public function store(Request $request){
         $this->nhomtin->create([
@@ -38,7 +37,7 @@ class NewsgroupController extends Controller
 
     public function getNhomtin($NT_ViTri){
         $data = $this->nhomtin->all();
-        $recusive = new NewsRecusive($data);
+        $recusive = new NewsgroupRecusive($data);
         $htmlOption = $recusive->nhomtinRecusive($NT_ViTri);
         return $htmlOption;
     }

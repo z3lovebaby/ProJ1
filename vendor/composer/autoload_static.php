@@ -521,7 +521,7 @@ class ComposerStaticInit8e7b31c49700611a935dddb5c3f904bf
     public static $classMap = array (
         'App\\Components\\MenuRecusive' => __DIR__ . '/../..' . '/app/Components/MenuRecusive.php',
         'App\\Components\\NewsRecusive' => __DIR__ . '/../..' . '/app/Components/NewsRecusive.php',
-        'App\\Components\\NewsnewsRecusive' => __DIR__ . '/../..' . '/app/Components/NewsnewsRecusive.php',
+        'App\\Components\\NewsgroupRecusive' => __DIR__ . '/../..' . '/app/Components/NewsgroupRecusive.php',
         'App\\Components\\Recusive' => __DIR__ . '/../..' . '/app/Components/Recusive.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -532,7 +532,7 @@ class ComposerStaticInit8e7b31c49700611a935dddb5c3f904bf
         'App\\Http\\Controllers\\MenuController' => __DIR__ . '/../..' . '/app/Http/Controllers/MenuController.php',
         'App\\Http\\Controllers\\NXBController' => __DIR__ . '/../..' . '/app/Http/Controllers/NXBController.php',
         'App\\Http\\Controllers\\NewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewsController.php',
-        'App\\Http\\Controllers\\NewsnewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewsnewsController.php',
+        'App\\Http\\Controllers\\NewsgroupController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewsgroupController.php',
         'App\\Http\\Controllers\\SachController' => __DIR__ . '/../..' . '/app/Http/Controllers/SachController.php',
         'App\\Http\\Controllers\\SettingAdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/SettingAdminController.php',
         'App\\Http\\Controllers\\TacgiaController' => __DIR__ . '/../..' . '/app/Http/Controllers/TacgiaController.php',

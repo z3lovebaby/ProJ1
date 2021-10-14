@@ -1,7 +1,7 @@
 <?php
     namespace App\Components;
     use App\Models\Nhomtin;
-    class NewsRecusive{
+    class NewsgroupRecusive{
         private $data;
         private $htmlSelect = '';
         public function __construct($data)

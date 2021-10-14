@@ -13,7 +13,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6">
-            <form action="{{ route('news.storenews') }}" method="post">
+            <form action="{{ route('news.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
               <div class="form-group">
                 <label>Tiêu đề</label>
@@ -37,8 +37,7 @@
                         placeholder="Nhập nội dung">
                 
                 <label>Ảnh</label>
-                <input type="file" class="form-control" name="TT_Anh"
-                        placeholder="Nhập ảnh">
+                <input type="file" class="form-control" name="TT_Anh">
                 
                 <label>Hiển thị</label>
                 <input type="number" class="form-control" name="TT_HienThi"

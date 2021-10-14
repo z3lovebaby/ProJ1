@@ -1,7 +1,7 @@
 <?php
     namespace App\Components;
     use App\Models\Tintuc;
-    class NewsnewsRecusive{
+    class NewsRecusive{
         private $data;
         private $htmlSelect = '';
         public function __construct($data)

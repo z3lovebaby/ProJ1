@@ -7,7 +7,6 @@ use App\Models\Tintuc;
 use Illuminate\Http\Request;
 use App\Components\NewsgroupRecusive;
 use App\Components\NewsRecusive;
-use App\Components\NewsnewsRecusive;
 use App\Http\Controllers\Controller;
 
 class NewsController extends Controller
@@ -23,13 +22,17 @@ class NewsController extends Controller
     public function create(){
         $htmOption = $this->getNhomtin($NT_ViTri = '');
         $data = $this->tintuc->all();
-        $recusive = new NewsnewsRecusive($data);
+        $recusive = new NewsRecusive($data);
         $html1Option = $recusive->tintucRecusive();
         return view('admin.news.add', compact('htmOption')); 
     }
+    public function index(){
+        $tintucs = $this->tintuc->latest()->paginate(3);
+        return view('admin.news.index', compact('tintucs')); 
+    }
     public function getNhomtin($NT_ViTri){
         $data = $this->nhomtin->all();
-        $recusive = new NewsRecusive($data);
+        $recusive = new NewsgroupRecusive($data);
         $htmlOption = $recusive->nhomtinRecusive($NT_ViTri);
         return $htmlOption;
     }
@@ -50,7 +53,7 @@ class NewsController extends Controller
         $tintuc = $this->tintuc->find($id);
         $htmlOption = $this->getNhomtin($tintuc->TT_NhomTin);
         $data1 = $this->tintuc->all();
-        $recusive = new NewsnewsRecusive($data1);
+        $recusive = new NewsRecusive($data1);
         $html1Option = $recusive->tintucRecusive($id);
         return view('admin.news.edit', compact('tintuc', 'htmlOption'));
     }
