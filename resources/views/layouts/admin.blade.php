@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  @yield('title')
- <link rel='icon' href="https://scontent.fhan5-4.fna.fbcdn.net/v/t1.6435-9/152406961_1802432383270100_3355430014002109187_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8631f5&_nc_ohc=WYGiRhCcNtsAX-zJRuj&tn=GNg9XADo8URz-FIm&_nc_ht=scontent.fhan5-4.fna&oh=99c02c5b488d20d5de95436aad6422ce&oe=61834C9B"  />
+ <link rel='icon' href="https://scontent.fhan5-6.fna.fbcdn.net/v/t1.6435-9/118523325_100106701835979_8315065556983610281_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=zM7FbwfWUtoAX-WKfDR&_nc_ht=scontent.fhan5-6.fna&oh=5b90faa60937540f36071c42a47d9d2a&oe=618F054F"  />
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">

@@ -50,8 +50,8 @@
                                 </td>
 
                                 <td>
-                                    <a href="{{route('advert.edit',['id'=>$a->id])}}" class="btn btn-default">Sửa</a>
-                                    <a href=""data-url="{{ route('advert.delete',['id'=>$a->id])}}" class="btn btn-danger action_delete">xóa</a>
+                                    <a href="{{route('advert.edit',['id'=>$a->id])}}" class="btn btn-default">EDIT</a>
+                                    <a href=""data-url="{{ route('advert.delete',['id'=>$a->id])}}" class="btn btn-danger action_delete">DELETE</a>
                                 </td>
               </tr>
 

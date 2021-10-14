@@ -2,7 +2,7 @@
 <html>
     <head>
       <title>CodeKit Login</title>
-      <link rel='icon' href="https://scontent.fhan5-4.fna.fbcdn.net/v/t1.6435-9/152406961_1802432383270100_3355430014002109187_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8631f5&_nc_ohc=WYGiRhCcNtsAX-zJRuj&tn=GNg9XADo8URz-FIm&_nc_ht=scontent.fhan5-4.fna&oh=99c02c5b488d20d5de95436aad6422ce&oe=61834C9B"  />
+      <link rel='icon' href="https://scontent.fhan5-6.fna.fbcdn.net/v/t1.6435-9/118523325_100106701835979_8315065556983610281_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=zM7FbwfWUtoAX-WKfDR&_nc_ht=scontent.fhan5-6.fna&oh=5b90faa60937540f36071c42a47d9d2a&oe=618F054F"  />
       <!-- https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png -->
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
         <style>
@@ -32,7 +32,12 @@
 <!-- <div class="fb-login-button" >Login with Facebook</div> -->
 <div class="min-h-screen flex items-center justify-center bg-blue-100 py-12 px-4 sm:px-6 lg:px-8">
  
-   
+<!-- <div class="flex flex-wrap justify-center">
+  <div class="w-8/12 sm:w-6/12 px-4">
+    <img src="https://scontent.fhan5-4.fna.fbcdn.net/v/t1.6435-9/152406961_1802432383270100_3355430014002109187_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8631f5&_nc_ohc=3Yrx4Na3mp8AX9-k55-&_nc_ht=scontent.fhan5-4.fna&oh=aa958872a53416c145c25d61d767af58&oe=618F2A1B" alt="..."
+      class="shadow-xl rounded max-w-full h-auto align-middle border-none" />
+  </div>
+</div> -->
  
     <img  style="border:20px;margin:50px;float:left;width:500px;height: 500px;" class=" object-scale-down" src="https://scontent.fhan5-4.fna.fbcdn.net/v/t1.6435-9/152406961_1802432383270100_3355430014002109187_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8631f5&_nc_ohc=WYGiRhCcNtsAX-zJRuj&tn=GNg9XADo8URz-FIm&_nc_ht=scontent.fhan5-4.fna&oh=99c02c5b488d20d5de95436aad6422ce&oe=61834C9B">
      <hr>
@@ -41,7 +46,7 @@
         
       <div>
 
-        <img class="mx-auto h-12 w-auto rounded-full" src="https://scontent.fhan5-4.fna.fbcdn.net/v/t1.6435-9/152406961_1802432383270100_3355430014002109187_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8631f5&_nc_ohc=WYGiRhCcNtsAX-zJRuj&tn=GNg9XADo8URz-FIm&_nc_ht=scontent.fhan5-4.fna&oh=99c02c5b488d20d5de95436aad6422ce&oe=61834C9B" alt="Workflow">
+        <img class="mx-auto h-12 w-auto rounded-full" src="https://scontent.fhan5-4.fna.fbcdn.net/v/t1.6435-9/152406961_1802432383270100_3355430014002109187_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8631f5&_nc_ohc=3Yrx4Na3mp8AX9-k55-&_nc_ht=scontent.fhan5-4.fna&oh=aa958872a53416c145c25d61d767af58&oe=618F2A1B" alt="Workflow">
         <h2 class="mt-6 text-center text-3xl font-bold text-gray-900">
         Welcome to codekit
         <br>Group 1

@@ -2,7 +2,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="" class="brand-link">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVqoDMovFUeYh6AqHjGeIgRxUm2BlTagBvoA&usqp=CAUg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="https://bktoanthu.com/images/logo.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Group 1</span>
     </a>
 
@@ -11,7 +11,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="https://images.unsplash.com/photo-1515871204537-49a5fe66a31f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGhlYXJ0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="img-circle elevation-2" alt="User Image">
+          <img src="https://scontent.fhan5-4.fna.fbcdn.net/v/t1.6435-9/152406961_1802432383270100_3355430014002109187_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8631f5&_nc_ohc=3Yrx4Na3mp8AX9-k55-&_nc_ht=scontent.fhan5-4.fna&oh=aa958872a53416c145c25d61d767af58&oe=618F2A1B" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Group 1</a>

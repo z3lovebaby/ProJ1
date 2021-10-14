@@ -37,7 +37,7 @@
                 </div>
                 
                 <div class="col-md-12">
-                    <table class="table">
+                    <table class="table table-striped table-dark">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -56,8 +56,8 @@
                                 <td>{{$setting->config_value}}</td>
 
                                 <td>
-                                    <a href="{{route('settings.edit',['id'=>$setting->id]).'?type='.$setting->type}}" class="btn btn-default">Sửa</a>
-                                    <a data-url="{{route('settings.delete',['id'=>$setting->id]).'?type='.$setting->type}}" class="btn btn-danger action_delete">xóa</a>
+                                    <a href="{{route('settings.edit',['id'=>$setting->id]).'?type='.$setting->type}}" class="btn btn-default">EDIT</a>
+                                    <a data-url="{{route('settings.delete',['id'=>$setting->id]).'?type='.$setting->type}}" class="btn btn-danger action_delete">DELETE</a>
                                 </td>
 
                             </tr>
