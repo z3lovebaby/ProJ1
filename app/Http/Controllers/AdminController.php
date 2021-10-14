@@ -31,7 +31,7 @@ class AdminController extends Controller
     public function postLoginAdmin(Request $request)
     {
         
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password],$request->remember_me)) {
             // Authentication was successful..
             
             session()->put('email',$request->email);
