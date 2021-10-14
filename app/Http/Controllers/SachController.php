@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Components\Recusive;
 use App\Http\Controllers\Controller;
 use App\Models\Danhmucsach;
+use App\Models\Nxb;
 use App\Models\Sach;
+use App\Models\Tacgia;
 use App\Traits\StorageImageTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -19,11 +22,18 @@ class SachController extends Controller
     use StorageImageTrait;
     private $category;
     private $sp;
-    public function __construct(Danhmucsach $category,Sach $sp)
+    private $nxb;
+    private $tacgia;
+    private $htmlSelect = '';
+    private $htmlSelect2 = '';
+    public function __construct(Danhmucsach $category,Sach $sp,Tacgia $tacgia,Nxb $nxb)
     {
        
         $this->category=$category;
         $this->sp=$sp;
+        $this->nxb=$nxb;
+        $this->tacgia=$tacgia;
+        
     }
     
         public function index(){
@@ -35,8 +45,9 @@ class SachController extends Controller
         {
 
             $htmlOption=$this->getCategory($parentId='');
-                        
-            return view ('admin.sachs.add',compact('htmlOption'));
+            $htmlOptionn=$this->getTacgia($id='');    
+            $htmlOptionnn=$this->getNXB($id='');     
+            return view ('admin.sachs.add',compact('htmlOption','htmlOptionn','htmlOptionnn'));
         }
 
         public function getCategory($parentId){
@@ -45,6 +56,33 @@ class SachController extends Controller
             $htmlOption=$recusive->danhmucsachRecusive($parentId);
             return $htmlOption;
         }
+        public function getTacgia($id){
+            $data1 = $this->tacgia->all();
+            foreach ($data1 as $value) {
+                if( !empty($id) && $id==$value['id'] ){
+                    $this->htmlSelect .= "<option selected value='".$value['id']."'>" . $value['TG_HoTen'] . "</option>";
+                } else {
+                    $this->htmlSelect .= "<option value='".$value['id']."'>" . $value['TG_HoTen'] . "</option>";
+                }
+            }
+            $htmlOptionn = $this->htmlSelect;
+            return $htmlOptionn;
+        }
+
+        //
+        public function getNXB($id){
+            $data1 = $this->nxb->all();
+            foreach ($data1 as $value) {
+                if( !empty($id) && $id==$value['id'] ){
+                    $this->htmlSelect2 .= "<option selected value='".$value['id']."'>" . $value['NXB_Ten'] . "</option>";
+                } else {
+                    $this->htmlSelect2 .= "<option value='".$value['id']."'>" . $value['NXB_Ten'] . "</option>";
+                }
+            }
+            $htmlOptionnn = $this->htmlSelect2;
+            return $htmlOptionnn;
+        }
+        //
         public function store(Request $request){
            try{
             DB::beginTransaction();
@@ -56,6 +94,7 @@ class SachController extends Controller
                 'S_Chitiet'=>$request->S_Chitiet,
                 'S_TuKhoa'=>$request->S_TuKhoa,
                 'S_NXBId'=>$request->S_NXBId,
+                'S_SoLuong'=>$request->S_SoLuong,
                 'S_TacGiaId'=>$request->S_TacGiaId
             ];
             $dataUp=$this->storageTraitUploat($request,'S_Anh','sachs');
@@ -75,7 +114,9 @@ class SachController extends Controller
         public function edit($id){
             $sachEdit=$this->sp->find($id); //sp laf bien  nhan dl
             $htmlOption=$this->getCategory($sachEdit->S_DanhmucId);
-          return view ('admin.sachs.edit',compact('sachEdit','htmlOption'));
+            $htmlOptionnn=$this->getNXB($sachEdit->S_NXBId);
+            $htmlOptionn = $this->getTacgia($sachEdit->S_TacGiaId);
+          return view ('admin.sachs.edit',compact('sachEdit','htmlOption','htmlOptionn','htmlOptionnn'));
       }
 
       public function update(Request $request,$id){
