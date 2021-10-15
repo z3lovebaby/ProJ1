@@ -20,7 +20,8 @@ class Tintuc extends Model
         'TT_Anh',
         'TT_HienThi',
         'TT_NhomTin',
-        'TT_TrangThai'
+        'TT_TrangThai',
+        'TT_paths'
     ];
 
     public function Nhomtins(){

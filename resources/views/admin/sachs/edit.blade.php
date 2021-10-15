@@ -7,7 +7,11 @@
 @section('css')
     <link href="{{asset('vendors/select2/select2.min.css')}}" rel="stylesheet" />
     <script src="{{asset('admins/sach/add/add.css')}}"></script>
-
+<style> .S_Anh {
+    width: 36%;
+    height: 100%;
+}
+</style>
 @endsection
 @section('content')
 <!-- Content Wrapper. Contains page content -->
@@ -38,9 +42,12 @@
                     <input class="border py-2 px-3 text-grey-800" type="file" name="S_Anh"  id="file">
                 </div>
 
-                {{-- <div class="flex flex-col w-2 h-2">
-                   <img class="anh w-0.5 h-2" src="{{$sachEdit->S_ViTri}}" alt="">
-                </div> --}}
+                <div class="col-md-12">
+                  <div class="row">
+                    <img class="S_Anh" src="{{$sachEdit->S_ViTri}}" alt="">
+                  </div>
+                   
+                </div>
 
 
               <div class="form-group">

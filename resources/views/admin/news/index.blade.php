@@ -4,7 +4,13 @@
     News
  </title>
  @endsection
-
+ @section('css')
+ <style> .TT_Anh {
+     width: 150px;
+     height: 100px;
+ }
+ </style>
+ @endsection
  @section('content')
   <div class="content-wrapper">
     @include('partials.content-header',['name'=>'News','key'=>'List'])
@@ -34,7 +40,7 @@
                   <th scope="row">{{ $tintuc->id }}</th>
                   <td>{{ $tintuc->TT_TieuDe }}</td>
                   <td>{{ $tintuc->TT_TacGia }}</td>
-                  <td>{{ $tintuc->TT_Anh }}</td>
+                  <td><img class="TT_Anh"src="{{ $tintuc->TT_paths}}"></td>
                   <td>{{ $tintuc->TT_NhomTin }}</td>
                   <td>
                     <a href="{{ route('news.edit', ['id' => $tintuc->id]) }}" class="btn btn-default">EDIT</a>

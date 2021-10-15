@@ -36,8 +36,10 @@
                 <input type="text" class="form-control" name="TT_NoiDung"
                         placeholder="Nhập nội dung">
                 
-                <label>Ảnh</label>
-                <input type="file" class="form-control" name="TT_Anh">
+                <div class="flex flex-col mb-4">
+                  <label class="mb-2 font-bold text-lg text-gray-900" for="File">FILE</label>
+                  <input class="border py-2 px-3 text-grey-800" type="file" name="TT_Anh"  id="file">
+              </div>
                 
                 <label>Hiển thị</label>
                 <input type="number" class="form-control" name="TT_HienThi"

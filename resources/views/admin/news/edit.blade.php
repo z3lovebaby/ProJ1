@@ -4,6 +4,13 @@
     News
  </title>
  @endsection
+ @section('css')
+ <style> .TT_Anh {
+     width: 36%;
+     height: 100%;
+ }
+ </style>
+ @endsection
  @section('content')
  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -46,11 +53,23 @@
                         value="{{ $tintuc->TT_NoiDung }}"
                         placeholder="Nhập nội dung">
 
-                <label>Ảnh</label>
+                {{-- <label>Ảnh</label>
                 <input type="file" class="form-control" name="TT_Anh"
-                        value="{{ $tintuc->TT_Anh }}"
+                        value="{{ $tintuc->TT_paths}}"
                         placeholder="Chọn ảnh">
-                
+                // --}}
+                <div class="flex flex-col mb-4">
+                  <label class="mb-2 font-bold text-lg text-gray-900" for="File">FILE</label>
+                  <input class="border py-2 px-3 text-grey-800" type="file" name="TT_Anh"  id="file">
+              </div>
+
+              <div class="col-md-12">
+                <div class="row">
+                  <img class="TT_Anh" src="{{$tintuc->TT_paths}}" alt="">
+                </div>
+                 
+              </div>
+
                 <label>Hiển thị</label>
                 <input type="number" class="form-control" name="TT_HienThi"
                         value="{{ $tintuc->TT_HienThi }}"
