@@ -1,7 +1,7 @@
 @extends('layouts.admin')
  @section('title')
  <title>
-    Newsgroup
+    NEWSGROUP
  </title>
  @endsection
  @section('content')
@@ -21,15 +21,15 @@
             <form action="{{ route('newsgroup.store') }}" method="post">
                 @csrf
               <div class="form-group">
-                <label>Tên nhóm tin</label>
+                <label>TÊN NHÓM TIN</label>
                 <input type="text" class="form-control" name="NT_Ten"
                         placeholder="Nhập nhóm tin">
                 
-                <label>Mô tả</label>
+                <label>MÔ TẢ</label>
                 <input type="text" class="form-control" name="NT_MoTa"
                         placeholder="Nhập mô tả">
                 
-                <label>Vị trí</label>
+                <label>VỊ TRÍ</label>
                 <select class="form-control" name="NT_ViTri">
                   <option value="0">Chọn vị trí cao nhất</option>
                   {!!$htmlOption!!}

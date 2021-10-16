@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('title')
 <title>
-  Sách
+  SÁCH
 </title>
 @endsection
 @section('css')
@@ -19,7 +19,7 @@
 <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
    <!-- Content Header (Page header) -->
-    @include('partials.content-header',['name'=>'Sach','key'=>'List'])
+    @include('partials.content-header',['name'=>'SÁCH','key'=>'LIST'])
    <!-- /.content-header -->
 
    <!-- Main content -->
@@ -27,20 +27,20 @@
      <div class="container-fluid">
        <div class="row">
          <div class="col-md-12">
-           <a href="{{route('sachs.create')}}" class="btn btn-success float-right m-2">Add</a>
+           <a href="{{route('sachs.create')}}" class="btn btn-success float-right m-2">ADD</a>
          </div>
          <div class="col-md-12">
            <table class="table table-striped table-dark">
              <thead>
                <tr>
                  <th scope="col">#</th>
-                 <th scope="col">Tên sách</th>
-                 <th scope="col">Giá</th>
-                 <th scope="col">Ảnh</th>
-                 <th scope="col">Danh mục sách</th>
-                 <th scope="col">Số lượng</th>
-                 <th scope="col">Chi tiết</th>
-                 <th scope="col">Action</th>
+                 <th scope="col">TÊN SÁHC</th>
+                 <th scope="col">GIÁ</th>
+                 <th scope="col">ẢNH</th>
+                 <th scope="col">DANH MỤC</th>
+                 <th scope="col">SỐ LƯỢNG</th>
+                 <th scope="col">CHI TIẾT</th>
+                 <th scope="col">ACTION</th>
                </tr>
              </thead>
              <tbody>

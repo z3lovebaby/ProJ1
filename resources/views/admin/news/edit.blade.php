@@ -1,7 +1,7 @@
 @extends('layouts.admin')
  @section('title')
  <title>
-    News
+    NEWS
  </title>
  @endsection
  @section('css')
@@ -15,7 +15,7 @@
  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    @include('partials.content-header',['name'=>'News','key'=>'Edit'])
+    @include('partials.content-header',['name'=>'NEWS','key'=>'EDIT'])
     <!-- /.content-header -->
 
 
@@ -28,27 +28,27 @@
             <form action="{{ route('news.update', ['id' => $tintuc->id]) }}" method="post">
                 @csrf
               <div class="form-group">
-                <label>Tiêu đề</label>
+                <label>TIÊU ĐỀ</label>
                 <input type="text" class="form-control" name="TT_TieuDe"
                         value="{{ $tintuc->TT_TieuDe }}"
                         placeholder="Nhập tiêu đề">
                 
-                <label>Tác giả</label>
+                <label>TÁC GIẢ</label>
                 <input type="text" class="form-control" name="TT_TacGia"
                         value="{{ $tintuc->TT_TacGia }}"
                         placeholder="Nhập tác giả">
                 
-                <label>Ngày</label>
+                <label>NGÀY</label>
                 <input type="datetime-local" class="form-control" name="TT_Ngay"
                         value="{{ $tintuc->TT_Ngay }}"
                         placeholder="Nhập ngày">
 
-                <label>Mô Tả</label>
+                <label>MÔ TẢ</label>
                 <input type="text" class="form-control" name="TT_MoTa"
                         value="{{ $tintuc->TT_MoTa }}"
                         placeholder="Nhập mô tả">
                 
-                <label>Nội dung</label>
+                <label>NỘI DUNG</label>
                 <input type="text" class="form-control" name="TT_NoiDung"
                         value="{{ $tintuc->TT_NoiDung }}"
                         placeholder="Nhập nội dung">
@@ -69,19 +69,22 @@
                 </div>
                  
               </div>
-
-                <label>Hiển thị</label>
+{{-- 
+                <label>HIỂN THỊ</label>
                 <input type="number" class="form-control" name="TT_HienThi"
                         value="{{ $tintuc->TT_HienThi }}"
-                        placeholder="Hiển thị">
-                
-                <label>Nhóm tin</label>
+                        placeholder="Hiển thị"> --}}
+                        <div class="form-group">
+                          <label>HIỂN THỊ</label>
+                          <textarea name="TT_HienThi" class="form-control my-editor" value="{{ $tintuc->TT_HienThi }}"></textarea>
+                        </div>
+                <label>NHÓM TIN</label>
                 <select class="form-control" name="TT_NhomTin">
                   <option value="0">Chọn nhóm tin</option>
                   {!!$htmlOption!!}
                 </select>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">UPDATE</button>
             </form>
           </div>
         </div>

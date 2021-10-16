@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('title')
 <title>
-  Trang chủ
+  DANH MỤC SẢN PHẨM
 </title>
 @endsection
 @section('content')

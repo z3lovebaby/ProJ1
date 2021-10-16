@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('title')
 <title>
-  Them sach
+  SÁCH
 </title>
 @endsection
 @section('css')
@@ -16,7 +16,7 @@
 @section('content')
 <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
-  @include('partials.content-header',['name'=>'SÁCH','key'=>'SỬA'])
+  @include('partials.content-header',['name'=>'SÁCH','key'=>'EDIT'])
 
    <!-- Main content -->
    <div class="content">
@@ -80,14 +80,15 @@
               </div>
             <div class="form-group">
               <label for="exampleInputMota">SỐ LƯỢNG</label>
-              <input type="number" class="form-control" placeholder="Nhap vao số lượng" name="S_SoLuong">
+              <input type="number" class="form-control" placeholder="Nhap vao số lượng" name="S_SoLuong"
+              value="{{ $sachEdit->S_SoLuong }}" >
             </div>
 
             <div class="form-group">
               <label>CHI TIẾT</label>
               <textarea name="S_Chitiet" class="form-control my-editor"  rows="3"> {{$sachEdit->S_Chitiet}}"</textarea>
             </div>
-            <button type="submit" class="btn btn-primary">SUBMIT</button>
+            <button type="submit" class="btn btn-primary">UPDATE</button>
           </form>
          </div>
         

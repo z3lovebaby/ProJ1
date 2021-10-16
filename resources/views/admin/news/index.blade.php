@@ -1,7 +1,7 @@
 @extends('layouts.admin')
  @section('title')
  <title>
-    News
+    NEWS
  </title>
  @endsection
  @section('css')
@@ -27,11 +27,11 @@
              <thead>
                <tr>
                  <th scope="col">#</th>
-                 <th scope="col">Tiêu đề</th>
-                 <th scope="col">Tác giả</th>
-                 <th scope="col">Ảnh</th>
-                 <th scope="col">Nhóm tin</th>
-                 <th scope="col">Action</th>
+                 <th scope="col">TIÊU ĐỀ</th>
+                 <th scope="col">TÁC GIẢ</th>
+                 <th scope="col">ẢNH</th>
+                 <th scope="col">NHÓM TIN</th>
+                 <th scope="col">ACTION</th>
                </tr>
              </thead>
              <tbody>

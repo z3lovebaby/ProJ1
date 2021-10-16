@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('title')
 <title>
-  Advertisement
+  ADVERTISEMENT
 </title>
 @endsection
 @section('css')
@@ -15,7 +15,7 @@
 @section('content')
 <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
-   <!-- Content Header (Page header) -->@include('partials.content-header',['name'=>'Advertisement','key'=>'List'])
+   <!-- Content Header (Page header) -->@include('partials.content-header',['name'=>'ADVERT','key'=>'LIST'])
     
    <!-- /.content-header -->
 
@@ -24,18 +24,17 @@
      <div class="container-fluid">
        <div class="row">
          <div class="col-md-12">
-           <a href="{{route('advert.create')}}" class="btn btn-success float-right m-2">Add</a>
+           <a href="{{route('advert.create')}}" class="btn btn-success float-right m-2">ADD</a>
          </div>
          <div class="col-md-12">
            <table class="table table-striped table-dark">
              <thead>
                <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Advertisement</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Hình ảnh</th>
-
-                                <th scope="col">Option</th>
+                                <th scope="col">ADVERTISEMENT</th>
+                                <th scope="col">MÔ TẢ</th>
+                                <th scope="col">HÌNH ẢNH</th>
+                                <th scope="col">OPTION</th>
                </tr>
              </thead>
              <tbody>

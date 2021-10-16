@@ -1,14 +1,14 @@
 @extends('layouts.admin')
  @section('title')
  <title>
-    Tác giả
+    TÁC GIẢ
  </title>
  @endsection
  @section('content')
  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    @include('partials.content-header',['name'=>'Tác giả','key'=>'Edit'])
+    @include('partials.content-header',['name'=>'TÁC GIẢ','key'=>'EDIT'])
     <!-- /.content-header -->
 
 
@@ -21,17 +21,17 @@
             <form action="{{ route('tacgias.update', ['id' => $tacgia->id]) }}" method="post">
                 @csrf
               <div class="form-group">
-                <label>Tên tác giả</label>
+                <label>TÊN TÁC GIẢ</label>
                 <input type="text" class="form-control" name="TG_HoTen"
                         value="{{ $tacgia->TG_HoTen }}"
                         placeholder="Nhập tên tác giả">
                 
-                <label>Mô tả</label>
+                <label>MÔ TẢ</label>
                 <input type="text" class="form-control" name="TG_Mota"
                         value="{{ $tacgia->TG_Mota }}"
                         placeholder="Nhập mô tả">
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">UPDATE</button>
             </form>
           </div>
         </div>

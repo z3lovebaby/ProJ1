@@ -14,7 +14,7 @@
           <img src="https://scontent.fhan5-4.fna.fbcdn.net/v/t1.6435-9/152406961_1802432383270100_3355430014002109187_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8631f5&_nc_ohc=3Yrx4Na3mp8AX9-k55-&_nc_ht=scontent.fhan5-4.fna&oh=aa958872a53416c145c25d61d767af58&oe=618F2A1B" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Group 1</a>
+          <a href="#" class="d-block">GROUP 1</a>
         </div>
       </div>
 
@@ -37,7 +37,7 @@
             <a href="{{route('categories.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Danh mục sách
+                DANH MỤC SÁCH
                 <!-- <span class="right badge badge-danger">New</span> -->
               </p>
             </a>
@@ -47,7 +47,7 @@
             <a href="{{route('menus.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-               Menus
+               MENU SÁCH
                 
               </p>
             </a>
@@ -57,8 +57,8 @@
             <a href="{{route('sachs.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-               Sách
-                <span class="right badge badge-danger">SP</span>
+               SÁCH
+                <span class="right badge badge-danger">hot</span>
               </p>
             </a>
           </li>
@@ -67,7 +67,7 @@
             <a href="{{route('nxbs.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Nhà xuất bản
+                NHÀ XUẤT BẢN
                 <span class="right badge badge-danger">Nxb</span>
               </p>
             </a>
@@ -77,7 +77,7 @@
             <a href="{{route('tacgias.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Tác giả
+                TÁC GIẢ
                 <span class="right badge badge-danger">Tg</span>
               </p>
             </a>
@@ -86,7 +86,7 @@
             <a href="{{route('advert.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-               Advertisement
+               ADVERTISEMENT
                 
               </p>
             </a>
@@ -96,7 +96,7 @@
             <a href="{{route('settings.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-              Setting
+              SETTING
                 
               </p>
             </a>
@@ -106,7 +106,7 @@
             <a href="{{route('newsgroup.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Nhóm tin
+                NHÓM TIN
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
@@ -116,7 +116,7 @@
             <a href="{{route('news.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Tin tức
+                TIN TỨC
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>

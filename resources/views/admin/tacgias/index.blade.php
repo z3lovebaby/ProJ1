@@ -13,7 +13,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <a href="{{route('tacgias.create')}}" class="btn btn-success float-left m-2">Thêm tác giả</a>
+            <a href="{{route('tacgias.create')}}" class="btn btn-success float-left m-2">THÊM TÁC GIẢ</a>
           </div>
           
           <div class="col-md-12">
@@ -21,9 +21,9 @@
              <thead>
                <tr>
                  <th scope="col">#</th>
-                 <th scope="col">Tên tác giả</th>
-                 <th scope="col">Mô tả</th>
-                 <th scope="col">Action</th>
+                 <th scope="col">TÊN TÁC GIẢ</th>
+                 <th scope="col">MÔ TẢ</th>
+                 <th scope="col">ACTION</th>
                </tr>
              </thead>
              <tbody>

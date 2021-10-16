@@ -1,13 +1,13 @@
 @extends('layouts.admin')
  @section('title')
  <title>
-    News
+    NEWS
  </title>
  @endsection
  
  @section('content')
   <div class="content-wrapper">
-    @include('partials.content-header',['name'=>'News','key'=>'lish'])
+    @include('partials.content-header',['name'=>'NEWS','key'=>'LIST'])
 
 
     <div class="content">
@@ -17,23 +17,23 @@
             <form action="{{ route('news.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
               <div class="form-group">
-                <label>Tiêu đề</label>
+                <label>TIÊU ĐỀ</label>
                 <input type="text" class="form-control" name="TT_TieuDe"
                         placeholder="Nhập tiêu đề">
 
-                <label>Tác giả</label>
+                <label>TÁC GIẢ</label>
                 <input type="text" class="form-control" name="TT_TacGia"
                         placeholder="Nhập tên tác giả">
 
-                <label>Ngày</label>
+                <label>NGÀY</label>
                 <input type="datetime-local" class="form-control" name="TT_Ngay"
                         placeholder="Nhập ngày">
                 
-                <label>Mô tả</label>
+                <label>MÔ TẢ</label>
                 <input type="text" class="form-control" name="TT_MoTa"
                         placeholder="Nhập mô tả">
 
-                <label>Nội dung</label>
+                <label>NỘI DUNG</label>
                 <input type="text" class="form-control" name="TT_NoiDung"
                         placeholder="Nhập nội dung">
                 
@@ -47,18 +47,18 @@
                         placeholder="Nhập hiển thị"> --}}
                 
                         <div class="form-group">
-                          <label>Hiển thị</label>
+                          <label>HIỂN THỊ</label>
                           <textarea name="TT_HienThi" class="form-control my-editor"></textarea>
                         </div>
 
-                <label>Nhóm tin</label>
+                <label>NHÓM TIN</label>
                 <select class="form-control" name="TT_NhomTin">
                   <option value="0">Chọn nhóm tin</option>
                   {!!$htmOption!!}
                 </select>
 
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">SUBMIT</button>
             </form>
           </div>
         </div>

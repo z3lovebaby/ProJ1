@@ -1,7 +1,7 @@
 @extends('layouts.admin')
  @section('title')
  <title>
-    Nhà xuất bản
+    NHÀ XUẤT BẢN
  </title>
  @endsection
  @section('content')
@@ -21,11 +21,11 @@
             <form action="{{ route('nxbs.store') }}" method="post">
                 @csrf
               <div class="form-group">
-                <label>Tên NXB</label>
+                <label>TÊN NHÀ XUẤT BẢN</label>
                 <input type="text" class="form-control" name="NXB_Ten"
                         placeholder="Nhập tên NXB">
                 
-                <label>Mô tả</label>
+                <label>MÔ TẢ</label>
                 <input type="text" class="form-control" name="NXB_Mota"
                         placeholder="Nhập mô tả">
               </div>

@@ -1,14 +1,14 @@
 @extends('layouts.admin')
 @section('title')
 <title>
-    Setting
+    SETTING
 </title>
 @endsection
 @section('content')
 
 <div class="content-wrapper">
 
-    @include('partials.content-header',['name'=>'Setting','key'=>'Add'])
+    @include('partials.content-header',['name'=>'SETTING','key'=>'ADD'])
 
     <div class="content">
         <div class="container-fluid">
@@ -41,7 +41,7 @@
                         @endif
                         
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">SUBMIT</button>
                     </form>
                 </div>
 

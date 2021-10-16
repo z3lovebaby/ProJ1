@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('title')
 <title>
-  Them sach
+  SÁCH
 </title>
 @endsection
 @section('css')

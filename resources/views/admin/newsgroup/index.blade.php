@@ -1,7 +1,7 @@
 @extends('layouts.admin')
  @section('title')
  <title>
-    Newsgroup
+    NEWSGROUP
  </title>
  @endsection
 
@@ -21,9 +21,9 @@
              <thead>
                <tr>
                  <th scope="col">#</th>
-                 <th scope="col">Tên danh mục</th>
-                 <th scope="col">Mô tả</th>
-                 <th scope="col">Action</th>
+                 <th scope="col">TÊN NHÓM TIN</th>
+                 <th scope="col">MÔ TẢ</th>
+                 <th scope="col">ACTION</th>
                </tr>
              </thead>
              <tbody>

@@ -1,19 +1,19 @@
 @extends('layouts.admin')
  @section('title')
  <title>
-    Nhà xuất bản
+    NHÀ XUẤT BẢN
  </title>
  @endsection
 
  @section('content')
   <div class="content-wrapper">
-    @include('partials.content-header',['name'=>'NXB','key'=>'List'])
+    @include('partials.content-header',['name'=>'NXB','key'=>'LIST'])
 
     <div class="content">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <a href="{{route('nxbs.create')}}" class="btn btn-success float-left m-2">Add NXB</a>
+            <a href="{{route('nxbs.create')}}" class="btn btn-success float-left m-2">ADD NXB</a>
           </div>
           
           <div class="col-md-12">
@@ -21,9 +21,9 @@
              <thead>
                <tr>
                  <th scope="col">#</th>
-                 <th scope="col">Tên NXB</th>
-                 <th scope="col">Mô tả</th>
-                 <th scope="col">Action</th>
+                 <th scope="col">TÊN NHÀ XUẤT BẢN</th>
+                 <th scope="col">MÔ TẢ</th>
+                 <th scope="col">ACTION</th>
                </tr>
              </thead>
              <tbody>

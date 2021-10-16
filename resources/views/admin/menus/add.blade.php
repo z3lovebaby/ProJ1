@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 @section('title')
 <title>
-  Trang chủ
+  MENU
 </title>
 @endsection
 @section('content')
 <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
-  @include('partials.content-header',['name'=>'Menu','key'=>'Add'])
+  @include('partials.content-header',['name'=>'MENU','key'=>'ADD'])
 
    <!-- Main content -->
    <div class="content">
@@ -17,13 +17,13 @@
              <form action="{{route('menus.store')}}" method="POST" class="ml-5">
                @csrf
             <div class="form-group">
-              <label for="exampleInputEmail1">Tên menu</label>
+              <label for="exampleInputEmail1">MENU</label>
               <input type="text" class="form-control" name="name"
               placeholder="Nhap tên menu">
               </div>
               
               <div class="form-group">
-                <label for="exampleFormControlSelect1">Chọn danh mục cha</label>
+                <label for="exampleFormControlSelect1">CHỌN DANH MỤC CHA</label>
                 <select class="form-control" name="parent_id">
                   <option value="0">Chọn đi chờ chi</option>
                     {!!$optionSelect!!}

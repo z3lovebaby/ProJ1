@@ -15,7 +15,7 @@
 
 <div class="content-wrapper">
 
-@include('partials.content-header',['name'=>'Setting','key'=>'List'])
+@include('partials.content-header',['name'=>'SETTING','key'=>'LIST'])
 
 
 
@@ -25,7 +25,7 @@
                 <div class="col-md-12">
                 <div class="dropdown doimau">
                         <a class="btn  dropdown-toggle btn-success" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Add Setting
+                                    ADD SETTIG
                         </a>
 
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -43,7 +43,7 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Config Key</th>
                                 <th scope="col">Config Value</th>
-                                <th scope="col">Action</th>
+                                <th scope="col">ACTION</th>
 
 
                             </tr>

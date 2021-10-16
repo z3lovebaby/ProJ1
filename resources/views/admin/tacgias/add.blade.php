@@ -1,14 +1,14 @@
 @extends('layouts.admin')
  @section('title')
  <title>
-    Tác giả
+    TÁC GIẢ
  </title>
  @endsection
  @section('content')
  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    @include('partials.content-header',['name'=>'Tác giả','key'=>'lish'])
+    @include('partials.content-header',['name'=>'TÁC GIẢ','key'=>'LIST'])
     <!-- /.content-header -->
 
 
@@ -21,11 +21,11 @@
             <form action="{{ route('tacgias.store') }}" method="post">
                 @csrf
               <div class="form-group">
-                <label>Tên tác giả</label>
+                <label>TÊN TÁC GIẢ</label>
                 <input type="text" class="form-control" name="TG_HoTen"
                         placeholder="Nhập tên tác giả">
                 
-                <label>Mô tả</label>
+                <label>MÔ TẢ</label>
                 <input type="text" class="form-control" name="TG_Mota"
                         placeholder="Nhập mô tả">
               </div>
