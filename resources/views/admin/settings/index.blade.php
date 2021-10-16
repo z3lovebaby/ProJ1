@@ -25,7 +25,7 @@
                 <div class="col-md-12">
                 <div class="dropdown doimau">
                         <a class="btn  dropdown-toggle btn-success" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    ADD SETTIG
+                                    ADD SETTING
                         </a>
 
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">

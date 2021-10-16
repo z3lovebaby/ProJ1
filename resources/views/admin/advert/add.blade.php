@@ -19,7 +19,7 @@
                         @csrf
                         <div class="form-group">
                             <label for="">TÊN QUẢNG CÁO</label>
-                            <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Nhập tên " value="">
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Nhập tên " value="{{old('name')}}">
                             @error('name')
     <div class="alert alert-danger">{{ $message }}</div>
 @enderror
@@ -29,7 +29,7 @@
                         <div class="form-group">
                             <label for="">MÔ TẢ</label>
                             
-                            <textarea name="description" class="form-control  @error('description') is-invalid @enderror " rows="4"></textarea>
+                            <textarea name="description" class="form-control  @error('description') is-invalid @enderror " rows="4">{{old('description')}}</textarea>
                             @error('description')
     <div class="alert alert-danger">{{ $message }}</div>
 @enderror

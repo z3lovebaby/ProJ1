@@ -4,6 +4,14 @@
     TRANG CHỦ
 </title>
 @endsection
+@section('css')
+<style>
+  .abc {
+    width: 150px;
+    height: 100px;
+}
+</style>
+@endsection
 @section('content')
 
 <div class="content-wrapper">
@@ -41,7 +49,7 @@
 @enderror
                             <div class="col-md-12">
                                 <div class="row">
-                                    <img src="{{$adverts->image_path}}" alt="" >
+                                    <img class="abc" src="{{$adverts->image_path}}" alt="" >
                                     
                                 </div>
                             </div>
