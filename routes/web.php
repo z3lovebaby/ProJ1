@@ -24,7 +24,7 @@ Route::get('/logout', [
 
 Route::get('/home', [
     AdvertAdminController::class,'home'
-]);
+])->name('home');
 
 
 Route::prefix('admin')->group(function () {
