@@ -22,13 +22,13 @@
                 @csrf
               <div class="form-group">
                 <label>Tên NXB</label>
-                <input type="text" class="form-control" name="NXT_Ten"
-                        value="{{ $nxb->NXT_Ten }}"
+                <input type="text" class="form-control" name="NXB_Ten"
+                        value="{{ $nxb->NXB_Ten }}"
                         placeholder="Nhập tên NXB">
                 
                 <label>Mô tả</label>
-                <input type="text" class="form-control" name="NXT_Mota"
-                        value="{{ $nxb->NXT_Mota }}"
+                <input type="text" class="form-control" name="NXB_Mota"
+                        value="{{ $nxb->NXB_Mota }}"
                         placeholder="Nhập mô tả">
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
