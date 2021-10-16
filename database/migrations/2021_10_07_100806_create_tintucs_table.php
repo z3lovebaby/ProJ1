@@ -21,7 +21,7 @@ class CreateTintucsTable extends Migration
             $table->text('TT_MoTa');
             $table->text('TT_NoiDung');
             $table->string('TT_Anh');
-            $table->integer('TT_HienThi');
+            $table->text('TT_HienThi');
             $table->unsignedBigInteger('TT_NhomTin');
             $table->foreign('TT_NhomTin')->references('id')->on('nhomtins')->onDelete('cascade');
             $table->boolean('TT_TrangThai')->nullable();

@@ -44,7 +44,7 @@
                   <td>{{ $tintuc->TT_NhomTin }}</td>
                   <td>
                     <a href="{{ route('news.edit', ['id' => $tintuc->id]) }}" class="btn btn-default">EDIT</a>
-                    <a href="{{ route('news.delete', ['id' => $tintuc->id]) }}" class="btn btn-danger">DELETE</a>
+                    <a href=""data-url="{{ route('news.delete', ['id' => $tintuc->id]) }}" class="btn btn-danger action_delete">DELETE</a>
                   </td>
                 </tr>
                @endforeach
@@ -62,6 +62,9 @@
     </div>
   </div>
  @endsection
- 
+ @section('js')
+    <script src="{{asset('vendors/SweetAlert2/sweetalert2@11.js')}}"></script>
+    <script src="{{asset('admins/sach/add/delete.js')}}"></script>
+@endsection
  
  

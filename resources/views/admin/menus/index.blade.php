@@ -47,7 +47,7 @@
          </div>
         
           <div class="col-md-12">
-           
+            {{$menus->links('pagination::bootstrap-4')}}
           </div>
 
        </div>

@@ -4,6 +4,7 @@
     News
  </title>
  @endsection
+ 
  @section('content')
   <div class="content-wrapper">
     @include('partials.content-header',['name'=>'News','key'=>'lish'])
@@ -41,9 +42,14 @@
                   <input class="border py-2 px-3 text-grey-800" type="file" name="TT_Anh"  id="file">
               </div>
                 
-                <label>Hiển thị</label>
+                {{-- <label>Hiển thị</label>
                 <input type="number" class="form-control" name="TT_HienThi"
-                        placeholder="Nhập hiển thị">
+                        placeholder="Nhập hiển thị"> --}}
+                
+                        <div class="form-group">
+                          <label>Hiển thị</label>
+                          <textarea name="TT_HienThi" class="form-control my-editor"></textarea>
+                        </div>
 
                 <label>Nhóm tin</label>
                 <select class="form-control" name="TT_NhomTin">
