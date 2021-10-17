@@ -8,8 +8,6 @@
 
  <div class="content-wrapper">
   @include('partials.content-header',['name'=>'DANH MỤC SẢN PHẨM','key'=>'EDIT'])
-
-
    <div class="content">
      <div class="container-fluid">
        <div class="row">
@@ -23,15 +21,15 @@
               name="DMS_Tieude" 
               value="{{$category->DMS_Tieude}}" 
               placeholder="Nhap ten danh muc">
-              </div>
+            </div>
               
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">CHỌN DANH MỤC</label>
-                <select class="form-control" name="DMS_parentId">
-                  <option value="0">CHỌN NGAY ĐI</option>
-                    {!!$htmlOption!!}
-                </select>
-              </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">CHỌN DANH MỤC</label>
+              <select class="form-control" name="DMS_parentId">
+                <option value="0">CHỌN NGAY ĐI</option>
+                  {!!$htmlOption!!}
+              </select>
+            </div>
 
             <div class="form-group">
               <label for="exampleInputMota">MÔ TẢ</label>
@@ -45,12 +43,9 @@
             <button type="submit" class="btn btn-primary">UPDATE</button>
           </form>
          </div>
-        
-
        </div>
-           </div>
+    </div>
    </div>
-  
  </div>
 
 @endsection

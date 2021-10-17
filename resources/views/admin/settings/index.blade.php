@@ -1,23 +1,20 @@
 @extends('layouts.admin')
 @section('title')
-<title>
-    Setting
-</title>
+    <title>
+        Setting
+    </title>
 @endsection
 @section('css')
-<link rel="stylesheet" href="{{asset('admins/Setting/index/index.css')}}">
+    <link rel="stylesheet" href="{{asset('admins/Setting/index/index.css')}}">
 @endsection
 @section('js')
-<script src="{{asset('vendors/SweetAlert2/sweetalert2@11.js')}}"></script>
-<script src="{{asset('admins/delete/delete.js')}}"></script>
+    <script src="{{asset('vendors/SweetAlert2/sweetalert2@11.js')}}"></script>
+    <script src="{{asset('admins/delete/delete.js')}}"></script>
 @endsection
 @section('content')
 
 <div class="content-wrapper">
-
-@include('partials.content-header',['name'=>'SETTING','key'=>'LIST'])
-
-
+    @include('partials.content-header',['name'=>'SETTING','key'=>'LIST'])
 
     <div class="content">
         <div class="container-fluid">
@@ -44,36 +41,27 @@
                                 <th scope="col">Config Key</th>
                                 <th scope="col">Config Value</th>
                                 <th scope="col">ACTION</th>
-
-
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($settings as $setting)
-                            <tr>
-                                <th scope="row">{{$setting->id}}</th>
-                                <td>{{$setting->config_key}}</td>
-                                <td>{{$setting->config_value}}</td>
-
-                                <td>
-                                    <a href="{{route('settings.edit',['id'=>$setting->id]).'?type='.$setting->type}}" class="btn btn-default">EDIT</a>
-                                    <a data-url="{{route('settings.delete',['id'=>$setting->id]).'?type='.$setting->type}}" class="btn btn-danger action_delete">DELETE</a>
-                                </td>
-
-                            </tr>
-                            
+                            @foreach($settings as $setting)
+                                <tr>
+                                    <th scope="row">{{$setting->id}}</th>
+                                    <td>{{$setting->config_key}}</td>
+                                    <td>{{$setting->config_value}}</td>
+                                    <td>
+                                        <a href="{{route('settings.edit',['id'=>$setting->id]).'?type='.$setting->type}}" class="btn btn-default">EDIT</a>
+                                        <a data-url="{{route('settings.delete',['id'=>$setting->id]).'?type='.$setting->type}}" class="btn btn-danger action_delete">DELETE</a>
+                                    </td>
+                                </tr>
                             @endforeach
                         </tbody>
-
                     </table>
                     {{ $settings->links('pagination::bootstrap-4') }}
                 </div>
-
             </div>
-
         </div>
     </div>
-
 </div>
 
 @endsection

@@ -1,17 +1,13 @@
 @extends('layouts.admin')
 @section('title')
-<title>
- MENU
-</title>
+  <title>
+  MENU
+  </title>
 @endsection
 @section('content')
-<!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
-   <!-- Content Header (Page header) -->
     @include('partials.content-header',['name'=>'MENU','key'=>'LIST'])
-   <!-- /.content-header -->
 
-   <!-- Main content -->
    <div class="content">
      <div class="container-fluid">
        <div class="row">
@@ -49,14 +45,10 @@
           <div class="col-md-12">
             {{$menus->links('pagination::bootstrap-4')}}
           </div>
-
        </div>
-       <!-- /.row -->
-     </div><!-- /.container-fluid -->
+     </div>
    </div>
-   <!-- /.content -->
  </div>
- <!-- /.content-wrapper -->
 @endsection
 @section('js')
     <script src="{{asset('vendors/SweetAlert2/sweetalert2@11.js')}}"></script>

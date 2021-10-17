@@ -1,15 +1,12 @@
 @extends('layouts.admin')
 @section('title')
-<title>
-  DANH MỤC SẢN PHẨM
-</title>
+  <title>
+    DANH MỤC SẢN PHẨM
+  </title>
 @endsection
 @section('content')
-<!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
   @include('partials.content-header',['name'=>'DANH MỤC SẢN PHẨM','key'=>'ADD'])
-
-   <!-- Main content -->
    <div class="content">
      <div class="container-fluid">
        <div class="row">
@@ -42,15 +39,10 @@
             <button type="submit" class="btn btn-primary">SUBMIT</button>
           </form>
          </div>
-        
-
        </div>
-       <!-- /.row -->
-     </div><!-- /.container-fluid -->
+     </div>
    </div>
-   <!-- /.content -->
  </div>
- <!-- /.content-wrapper -->
 @endsection
 
 

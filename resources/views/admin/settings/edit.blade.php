@@ -7,7 +7,6 @@
 @section('content')
 
 <div class="content-wrapper">
-
     @include('partials.content-header',['name'=>'SETTING','key'=>'EDIT'])
 
     <div class="content">
@@ -20,37 +19,31 @@
                             <label for="">Config_Key</label>
                             <input type="text" class="form-control @error('config_key') is-invalid @enderror" name="config_key" placeholder="Nhập confix_key" value="{{$settings->config_key}}">
                             @error('config_key')
-    <div class="alert alert-danger">{{ $message }}</div>
-@enderror
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         @if(request()->type==='Text')
-                        <div class="form-group">
-                            <label for="">Config_Value</label>
-                            <input type="text" class="form-control @error('config_value') is-invalid @enderror" name="config_value" placeholder="Nhập confix_value" value="{{$settings->config_value}}">
-                            @error('config_value')
-    <div class="alert alert-danger">{{ $message }}</div>
-@enderror
-                        </div>
+                            <div class="form-group">
+                                <label for="">Config_Value</label>
+                                <input type="text" class="form-control @error('config_value') is-invalid @enderror" name="config_value" placeholder="Nhập confix_value" value="{{$settings->config_value}}">
+                                @error('config_value')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
                         @elseif(request()->type==='Textarea')
-                        <div class="form-group">
-                        <textarea name="config_value" class="form-control @error('config_value') is-invalid @enderror" placeholder="Nhập confix_value"  rows="10">{{$settings->config_value}}</textarea>
-                        @error('config_value')
-    <div class="alert alert-danger">{{ $message }}</div>
-@enderror
-</div>
+                            <div class="form-group">
+                                <textarea name="config_value" class="form-control @error('config_value') is-invalid @enderror" placeholder="Nhập confix_value"  rows="10">{{$settings->config_value}}</textarea>
+                                @error('config_value')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
                         @endif
-                        
-
                         <button type="submit" class="btn btn-primary">UPDATE</button>
                     </form>
                 </div>
-
-
             </div>
-
         </div>
     </div>
-
 </div>
 
 @endsection
