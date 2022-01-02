@@ -11,10 +11,16 @@ use App\Traits\AuthAdminTrait;
 |--------------------------------------------------------------------------
 */
 
+Route::get('/register',[
+    AdminController::class, 'index'
+])->name('register');
+Route::post('/register', [
+    AdminController::class, 'store'
+]);
 
 Route::get('/admin', [
     AdminController::class, 'LoginAdmin'
-]);
+])->name('login');
 Route::post('/admin', [
     AdminController::class, 'postLoginAdmin'
 ]);

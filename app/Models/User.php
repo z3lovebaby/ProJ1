@@ -20,7 +20,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'remember_token'
     ];
 
     /**
@@ -32,6 +31,9 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    protected $dates = ['created_at', 'updated_at'];
+    protected $table = 'users';
 
     /**
      * The attributes that should be cast to native types.

@@ -2,7 +2,8 @@
     namespace App\Http\Controllers;
 
     use App\Http\Controllers\Controller;
-    use App\Traits\AuthAdminTrait;
+use App\Models\User;
+use App\Traits\AuthAdminTrait;
     use Illuminate\Contracts\Session\Session;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Auth;
@@ -10,15 +11,35 @@
 
     class AdminController extends Controller
     {
-        public function AuthLogin(){
-            $id=session()->get('id');
-            if($id){
-                return redirect()->to('home');
-            }
-            else{
-                return redirect()->to('admin');
-            }
+        //register
+        public function index(){
+            return view('admin.auth.register');
         }
+        public function store(Request $request){
+            $this->validate($request, [
+                'name' => 'required|max:255',
+                'email' => 'required|email',
+                'password' => 'required|min:6|confirmed',
+            ]);
+
+                User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => $request->password,
+            ]);
+            
+            auth()->attempt($request->only('email', 'password'));
+
+            //redirect
+            return redirect()->to('home');
+        }
+        public function AuthLogin(){
+            if(!Auth::check()){
+                return redirect()->back();
+            }
+            return redirect()->to('home');
+        }
+        
         public function LoginAdmin()
         {
             // if (auth()->check()) {
@@ -30,21 +51,25 @@
         
         public function postLoginAdmin(Request $request)
         {
-            if (Auth::attempt(['email' => $request->email, 'password' => $request->password],$request->remember_me)) {
-                // Authentication was successful..
-                session()->put('email',$request->email);
-                session()->put('id',$request->id);
-                return redirect()->to('home');
-            }
-            else{
-                session()->put('message','Email hoặc mật khẩu không đúng !');
-                return redirect()->to('admin');
-            }
+           // dd(Auth::attempt(['email' => $request->email, 'password' => $request->password]));
+           $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+        //dd(Auth::attempt($request->only('username', 'password')));
+        if (Auth::attempt($request->only('email', 'password'), $request->remember)) {
+            $request->session()->regenerate();
+
+            return redirect()->route('admin.home');
+        }
+
+        return back()->withErrors([
+            'username' => 'Sai tên đăng nhập hoặc mật khẩu',
+        ]);
         }
         public function logoutAdmin(){
             $this->AuthLogin();
-            session()->put('email',null);
-            session()->put('id',null);
+            Auth::logout();
             return redirect()->to('admin');
         }
     }

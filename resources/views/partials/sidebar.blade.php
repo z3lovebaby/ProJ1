@@ -42,16 +42,6 @@
               </p>
             </a>
           </li>
-
-          <li class="nav-item">
-            <a href="{{route('menus.index')}}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-               MENU SÁCH
-               <span class="right badge badge-danger">Mn</span>
-              </p>
-            </a>
-          </li>
           
           <li class="nav-item">
             <a href="{{route('sachs.index')}}" class="nav-link">
